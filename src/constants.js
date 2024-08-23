@@ -1,0 +1,1 @@
+export const FIXED_NAV_SCROLL_THRESHOLD = 450

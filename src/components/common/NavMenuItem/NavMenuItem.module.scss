@@ -1,0 +1,28 @@
+@import '@/styles/variables.scss';
+
+.nav {
+	&MenuItem::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $color-white;
+		opacity: 0;
+		transition: $main-transition;
+	}
+
+	&MenuItem {
+		position: relative;
+
+		&Fixed::before {
+			background-color: $color-black;
+		}
+	}
+
+	&MenuItem:hover::before {
+		width: 100%;
+		opacity: 1;
+	}
+}

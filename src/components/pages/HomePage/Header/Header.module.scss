@@ -1,33 +1,24 @@
-@import '@/styles/mixins.scss';
 @import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
 
 .header {
 	position: absolute;
 	z-index: 10;
-
 	width: 100%;
-
 	color: $color-white;
-
-	background-color: #ccc;
 
 	&Fixed {
 		position: fixed;
-
 		padding-bottom: 1.75rem;
-
 		color: $color-black;
 		background-color: rgba(243, 239, 232, 0.6);
-
 		transition: $main-transition;
-
 		backdrop-filter: blur(54px);
 	}
 }
 
 .nav {
 	padding-top: 1.75rem;
-
 	font-size: 1.25rem;
 	line-height: 1.42;
 
@@ -52,59 +43,5 @@
 				@include container(1170px, 20px);
 			}
 		}
-	}
-
-	&MenuList {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 3.13rem;
-
-		@media (max-width: $lg) {
-			gap: 1.88rem;
-		}
-
-		@media (max-width: $md) {
-			@include hidden;
-		}
-	}
-
-	&MenuPhone {
-		@media (max-width: $sm) {
-			font-size: 1rem;
-		}
-	}
-
-	&MenuItem::before,
-	&MenuPhone::before {
-		content: '';
-
-		position: absolute;
-		bottom: 0;
-		left: 0;
-
-		width: 0;
-		height: 1px;
-
-		background-color: $color-white;
-		opacity: 0;
-
-		transition: $main-transition;
-	}
-
-	&MenuItem,
-	&MenuPhone {
-		position: relative;
-
-		&Fixed::before {
-			background-color: $color-black;
-		}
-	}
-
-	&MenuItem:hover::before,
-	&MenuPhone:hover::before {
-		width: 100%;
-
-		opacity: 1;
 	}
 }

@@ -1,3 +1,4 @@
+import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants';
 import Image from 'next/image'
 import React from 'react'
 
@@ -5,7 +6,7 @@ const Logo = ({ scrollPosition }) => {
 	return (
 		<a href='#'>
 			<picture>
-				{scrollPosition > 450 ? (
+				{scrollPosition > FIXED_NAV_SCROLL_THRESHOLD ? (
 					<>
 						<source
 							srcSet='/images/logo-black-small.svg'
