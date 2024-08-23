@@ -1,0 +1,50 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.nav {
+	&MenuList {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3.13rem;
+
+		@media (max-width: $lg) {
+			gap: 1.88rem;
+		}
+
+		@media (max-width: $md) {
+			@include hidden;
+		}
+	}
+
+	&MenuPhone {
+		@media (max-width: $sm) {
+			font-size: 1rem;
+		}
+	}
+
+	&MenuPhone::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $color-white;
+		opacity: 0;
+		transition: $main-transition;
+	}
+
+	&MenuPhone {
+		position: relative;
+
+		&Fixed::before {
+			background-color: $color-black;
+		}
+	}
+
+	&MenuPhone:hover::before {
+		width: 100%;
+		opacity: 1;
+	}
+}
