@@ -12,9 +12,7 @@ const NavMenuItem = ({ link, scrollPosition, children }) => {
 				scrollPosition > FIXED_NAV_SCROLL_THRESHOLD &&
 				styles.navMenuItemFixed
 			}`}>
-			<Link href={link} className={styles.navMenuLink}>
-				{children}
-			</Link>
+			<Link href={link}>{children}</Link>
 		</li>
 	)
 }
