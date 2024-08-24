@@ -1,0 +1,72 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.info {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin-top: 0;
+	color: $color-white;
+	background-image: url('/images/header-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&Title {
+		@media (max-width: $sm) {
+			max-width: 360px;
+		}
+	}
+
+	&Wrapper {
+		display: flex;
+		padding-top: 4.5rem;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&Subtitle {
+		max-width: 610px;
+		margin-top: 3.13rem;
+		color: $color-white;
+
+		@media (max-width: $lg) {
+			max-width: 450px;
+		}
+
+		@media (max-width: $sm) {
+			max-width: 310px;
+			margin-top: 2.5rem;
+		}
+	}
+
+	&Button {
+		cursor: pointer;
+		margin-top: 3.13rem;
+		padding: 5px 20px;
+		font-size: 1.06rem;
+		line-height: 1.42;
+		letter-spacing: -0.01em;
+		background-color: $color-white;
+		border-radius: 10px;
+		border: none;
+		transition: $main-transition;
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-orange-200;
+		}
+
+		&:active {
+			color: $color-black;
+			background-color: $color-orange-100;
+		}
+
+		@media (max-width: $sm) {
+			margin-top: 2.5rem;
+			font-size: 1rem;
+		}
+	}
+}

@@ -1,9 +1,12 @@
-import Header from './Header/Header'
+import { Header, Info } from './'
 
 const HomePage = () => {
 	return (
 		<>
 			<Header />
+			<main>
+				<Info />
+			</main>
 		</>
 	)
 }
