@@ -41,32 +41,4 @@
 			margin-top: 2.5rem;
 		}
 	}
-
-	&Button {
-		cursor: pointer;
-		margin-top: 3.13rem;
-		padding: 5px 20px;
-		font-size: 1.06rem;
-		line-height: 1.42;
-		letter-spacing: -0.01em;
-		background-color: $color-white;
-		border-radius: 10px;
-		border: none;
-		transition: $main-transition;
-
-		&:hover {
-			color: $color-white;
-			background-color: $color-orange-200;
-		}
-
-		&:active {
-			color: $color-black;
-			background-color: $color-orange-100;
-		}
-
-		@media (max-width: $sm) {
-			margin-top: 2.5rem;
-			font-size: 1rem;
-		}
-	}
 }

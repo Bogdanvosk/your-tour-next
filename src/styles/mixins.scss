@@ -63,38 +63,54 @@
 	}
 }
 
-@mixin extra-button {
-	padding: 7px 60px 7px 20px;
+@mixin info-button {
+	margin-top: 3.13rem;
+	padding: 5px 20px;
+	font-size: 1.06rem;
+	line-height: 1.42;
+	font-weight: normal;
+	letter-spacing: -0.01em;
+	color: $color-black;
+	background-color: $color-white;
+	border-radius: 10px;
 
-	font-weight: 700;
-	font-size: 23px;
-	line-height: 28px;
+	&:hover {
+		color: $color-white;
+		background-color: $color-orange-200;
+	}
 
-	color: $color-white;
-	background-color: transparent;
-	border: none;
-	border-radius: 50px;
-
-	transition: $main-transition;
+	&:active {
+		color: $color-black;
+		background-color: $color-orange-100;
+	}
 
 	@media (max-width: $sm) {
-		font-size: 1rem;
+		margin-top: 2.5rem;
+	}
+}
+
+@mixin extra-button {
+	padding: 7px 60px 7px 20px;
+	font-weight: 700;
+	font-size: 1.44rem;
+	line-height: 1.21;
+	color: $color-white;
+	background-color: transparent;
+	border-radius: 50px;
+
+	@media (max-width: $sm) {
 		line-height: 1.42;
 	}
 
 	&::after {
 		content: '';
-
 		position: absolute;
 		top: 13px;
 		right: 22px;
-
 		width: 24px;
 		height: 26px;
-
 		background-image: url('/icons/arrow-right.svg');
 		background-repeat: no-repeat;
-		
 		transition: $main-transition;
 
 		@media (max-width: $sm) {

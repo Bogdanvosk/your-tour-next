@@ -1,0 +1,20 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.button {
+	cursor: pointer;
+	border: none;
+	transition: $main-transition;
+
+	@media (max-width: $sm) {
+		font-size: 1rem;
+	}
+}
+
+.infoButton {
+	@include info-button;
+}
+
+.extraButton {
+	@include extra-button;
+}

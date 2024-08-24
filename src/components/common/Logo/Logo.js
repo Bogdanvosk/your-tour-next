@@ -1,8 +1,21 @@
-import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants';
+import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 import Image from 'next/image'
-import React from 'react'
+import { useEffect, useState } from 'react'
 
 const Logo = ({ scrollPosition }) => {
+	const [screenWidth, setWidth] = useState(0)
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWidth(window.innerWidth)
+		}
+
+		window.addEventListener('resize', handleResize)
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
+
 	return (
 		<a href='#'>
 			<picture>
@@ -31,8 +44,8 @@ const Logo = ({ scrollPosition }) => {
 				)}
 
 				<Image
-					width={182}
-					height={30}
+					width={screenWidth > 640 ? 182 : 133}
+					height={screenWidth > 640 ? 32 : 22}
 					priority={true}
 					src='/images/logo.svg'
 					alt='logo'

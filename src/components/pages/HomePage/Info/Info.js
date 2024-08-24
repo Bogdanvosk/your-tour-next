@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './Info.module.scss'
-import { Typography } from '@/components/common'
+import { Button, Typography } from '@/components/common'
 
 const Info = () => {
 	return (
@@ -20,9 +20,7 @@ const Info = () => {
 						Идейные соображения высшего порядка, а также рамки и
 						место обучения кадров
 					</Typography>
-					<button type='button' className='info__button'>
-						Найти тур
-					</button>
+					<Button variant='info'>Найти тур</Button>
 				</div>
 			</div>
 		</section>
