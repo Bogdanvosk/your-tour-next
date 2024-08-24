@@ -14,17 +14,17 @@
 	background-size: cover;
 	background-position: center;
 
-	&Title {
-		@media (max-width: $sm) {
-			max-width: 360px;
-		}
-	}
-
 	&Wrapper {
 		display: flex;
 		padding-top: 4.5rem;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	&Title {
+		@media (max-width: $sm) {
+			max-width: 360px;
+		}
 	}
 
 	&Subtitle {

@@ -13,7 +13,6 @@ const Info = () => {
 						className={`${styles.infoTitle} title`}>
 						Идеальные путешествия существуют
 					</Typography>
-
 					<Typography
 						variant='p'
 						className={`${styles.infoSubtitle} subtitle normal`}>
