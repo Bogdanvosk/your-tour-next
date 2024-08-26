@@ -1,20 +1,20 @@
-@import '@/styles/variables.scss';
-@import '@/styles/mixins.scss';
+@use '@/styles/variables';
+@use '@/styles/mixins';
 
 .button {
 	cursor: pointer;
 	border: none;
 	transition: color 0.3s ease, background-color 0.3s ease;
 
-	@media (max-width: $sm) {
+	@media (max-width: variables.$sm) {
 		font-size: 1rem;
 	}
 }
 
 .infoButton {
-	@include info-button;
+	@include mixins.info-button;
 }
 
 .extraButton {
-	@include extra-button;
+	@include mixins.extra-button;
 }

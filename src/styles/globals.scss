@@ -1,13 +1,10 @@
-@import 'variables';
-@import 'mixins';
-
-* {
-	@include reset;
-}
+@use 'reset';
+@use 'variables';
+@use 'mixins';
 
 body {
-	font-family: $primary-font;
-	background-color: $color-beige-100;
+	font-family: variables.$primary-font;
+	background-color: variables.$color-beige-100;
 	scroll-behavior: smooth;
 }
 
@@ -19,25 +16,17 @@ button {
 section {
 	margin-top: 8.44rem;
 
-	@media (max-width: $sm) {
+	@media (max-width: variables.$sm) {
 		margin-top: 4.69rem;
 	}
 }
 
-li {
-	@include list-reset;
-}
-
-a {
-	@include link-reset;
-}
-
 .title {
-	@include title;
+	@include mixins.title;
 }
 
 .subtitle {
-	@include subtitle;
+	@include mixins.subtitle;
 }
 
 .normal,
@@ -51,31 +40,31 @@ a {
 	font-size: 1.44rem;
 	line-height: 1.22;
 
-	@include p-mobile;
+	@include mixins.p-mobile;
 }
 
 .normal {
 	font-size: 20px;
 
-	@include p-mobile;
+	@include mixins.p-mobile;
 }
 
 .small {
 	font-size: 1.06rem;
 	letter-spacing: -0.01em;
 
-	@include p-mobile;
+	@include mixins.p-mobile;
 }
 
 .container {
-	@include container(1170px, 55px);
+	@include mixins.container(1170px, 55px);
 
-	@media (max-width: $lg) {
-		@include container(1170px, 53px);
+	@media (max-width: variables.$lg) {
+		@include mixins.container(1170px, 53px);
 	}
 
-	@media (max-width: $sm) {
-		@include container(1170px, 21px);
+	@media (max-width: variables.$sm) {
+		@include mixins.container(1170px, 21px);
 	}
 }
 

@@ -1,5 +1,5 @@
-@import '@/styles/variables.scss';
-@import '@/styles/mixins.scss';
+@use '@/styles/variables';
+@use '@/styles/mixins';
 
 
 .h1,
@@ -12,7 +12,7 @@
 	line-height: 1.09;
 	letter-spacing: 0.02em;
 
-	@media (max-width: $sm) {
+	@media (max-width: variables.$sm) {
 		font-size: 2.13rem;
 		line-height: 1.12;
 	}
@@ -22,7 +22,7 @@
 	font-size: 3.69rem;
 	line-height: 1.24;
 
-	@media (max-width: $sm) {
+	@media (max-width: variables.$sm) {
 		font-size: 2.13rem;
 		line-height: 1.12;
 	}
@@ -33,7 +33,7 @@
 	font-size: 2.19rem;
 	line-height: 1.22;
 
-	@media (max-width: $sm) {
+	@media (max-width: variables.$sm) {
 		font-size: 1.44rem;
 		line-height: 1.2;
 		letter-spacing: 0.04em;

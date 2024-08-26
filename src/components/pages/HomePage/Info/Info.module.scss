@@ -1,5 +1,5 @@
-@import '@/styles/variables.scss';
-@import '@/styles/mixins.scss';
+@use '@/styles/variables';
+@use '@/styles/mixins';
 
 .info {
 	position: relative;
@@ -8,7 +8,7 @@
 	align-items: center;
 	height: 100vh;
 	margin-top: 0;
-	color: $color-white;
+	color: variables.$color-white;
 	background-image: url('/images/header-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -22,7 +22,7 @@
 	}
 
 	&Title {
-		@media (max-width: $sm) {
+		@media (max-width: variables.$sm) {
 			max-width: 360px;
 		}
 	}
@@ -30,13 +30,13 @@
 	&Subtitle {
 		max-width: 610px;
 		margin-top: 3.13rem;
-		color: $color-white;
+		color: variables.$color-white;
 
-		@media (max-width: $lg) {
+		@media (max-width: variables.$lg) {
 			max-width: 450px;
 		}
 
-		@media (max-width: $sm) {
+		@media (max-width: variables.$sm) {
 			max-width: 310px;
 			margin-top: 2.5rem;
 		}
