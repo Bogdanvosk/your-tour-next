@@ -38,6 +38,7 @@
 }
 
 .extraButton {
+	position: relative;
 	padding: 7px 60px 7px 20px;
 	font-weight: 700;
 	font-size: 1.44rem;
@@ -49,19 +50,14 @@
 	@media (max-width: variables.$sm) {
 		line-height: 1.42;
 	}
+}
 
-	&::after {
-		content: '';
-		position: absolute;
-		top: 13px;
-		right: 22px;
-		width: 24px;
-		height: 26px;
-		background-image: url('/icons/arrow-right.svg');
-		background-repeat: no-repeat;
+.arrowRight {
+	position: absolute;
+	top: 14px;
+	right: 23px;
 
-		@media (max-width: variables.$sm) {
-			top: 10px;
-		}
+	@media (max-width: variables.$sm) {
+		top: 10px;
 	}
 }

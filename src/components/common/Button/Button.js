@@ -1,5 +1,7 @@
 import cn from 'classnames'
 
+import { getIcon } from '@/utils/getIcon'
+
 import styles from './Button.module.scss'
 
 const buttonVariants = {
@@ -15,12 +17,17 @@ const Button = ({
 	className = '',
 	...props
 }) => {
+	const ArrowRight = getIcon('arrowRight')
+
 	return (
 		<button
 			{...props}
 			type={type}
 			className={cn(styles.button, buttonVariants[variant], className)}>
 			{children}
+			{variant === 'extra' && (
+				<ArrowRight className={styles.arrowRight} />
+			)}
 		</button>
 	)
 }

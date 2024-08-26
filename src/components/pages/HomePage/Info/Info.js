@@ -1,4 +1,5 @@
 import Button from '@/components/common/Button/Button'
+import Container from '@/components/common/Container/Container'
 import Typography from '@/components/common/Typography/Typography'
 
 import styles from './Info.module.scss'
@@ -6,7 +7,7 @@ import styles from './Info.module.scss'
 const Info = () => {
 	return (
 		<section className={styles.info}>
-			<div className='container'>
+			<Container>
 				<div className={styles.infoWrapper}>
 					<Typography
 						variant='h1'
@@ -23,7 +24,7 @@ const Info = () => {
 						Найти тур
 					</Button>
 				</div>
-			</div>
+			</Container>
 		</section>
 	)
 }

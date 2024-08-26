@@ -3,8 +3,9 @@ import cn from 'classnames'
 
 import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 
-import Logo from '@/components/common/Logo/Logo';
-import NavMenu from '@/components/common/NavMenu/NavMenu';
+import Container from '@/components/common/Container/Container';
+import Logo from '@/components/common/Logo/Logo'
+import NavMenu from '@/components/common/NavMenu/NavMenu'
 
 import styles from './Header.module.scss'
 
@@ -39,7 +40,7 @@ const Header = () => {
 				[styles.headerFixed]:
 					scrollPosition > FIXED_NAV_SCROLL_THRESHOLD
 			})}>
-			<div className='container'>
+			<Container>
 				<nav className={styles.nav}>
 					<div className={styles.navWrapper}>
 						<Logo scrollPosition={scrollPosition} />
@@ -49,7 +50,7 @@ const Header = () => {
 						/>
 					</div>
 				</nav>
-			</div>
+			</Container>
 		</header>
 	)
 }

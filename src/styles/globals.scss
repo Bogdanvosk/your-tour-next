@@ -63,18 +63,6 @@ section {
 	@include mixins.p-mobile;
 }
 
-.container {
-	@include mixins.container(1170px, 55px);
-
-	@media (max-width: variables.$lg) {
-		@include mixins.container(1170px, 53px);
-	}
-
-	@media (max-width: variables.$sm) {
-		@include mixins.container(1170px, 21px);
-	}
-}
-
 .main {
 	position: static;
 	z-index: 5;
