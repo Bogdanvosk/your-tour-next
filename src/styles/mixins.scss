@@ -111,7 +111,6 @@
 		height: 26px;
 		background-image: url('/icons/arrow-right.svg');
 		background-repeat: no-repeat;
-		transition: $main-transition;
 
 		@media (max-width: $sm) {
 			top: 10px;

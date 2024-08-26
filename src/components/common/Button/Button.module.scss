@@ -4,7 +4,7 @@
 .button {
 	cursor: pointer;
 	border: none;
-	transition: $main-transition;
+	transition: color 0.3s ease, background-color 0.3s ease;
 
 	@media (max-width: $sm) {
 		font-size: 1rem;
