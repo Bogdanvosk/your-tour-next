@@ -1,4 +1,5 @@
-import { Header, Info } from './'
+import Header from './Header/Header'
+import Info from './Info/Info'
 
 const HomePage = () => {
 	return (

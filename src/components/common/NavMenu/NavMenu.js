@@ -1,28 +1,36 @@
 import Link from 'next/link'
+import cn from 'classnames'
 
 import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 
-import styles from './NavMenu.module.scss'
 import NavMenuItem from '../NavMenuItem/NavMenuItem'
 
-const NavMenu = ({ scrollPosition, items }) => {
-	const navMenuItems = items.map(({ link, text }) => (
-		<NavMenuItem
-			key={`${link}_${text}`}
-			link={link}
-			scrollPosition={scrollPosition}>
-			{text}
-		</NavMenuItem>
-	))
+import styles from './NavMenu.module.scss'
 
+const NavMenuItems = ({ scrollPosition, items }) => {
+	return (
+		<ul className={styles.navMenuList}>
+			{items.map(({ link, text }) => (
+				<NavMenuItem
+					key={`${link}_${text}`}
+					link={link}
+					scrollPosition={scrollPosition}>
+					{text}
+				</NavMenuItem>
+			))}
+		</ul>
+	)
+}
+
+const NavMenu = ({ scrollPosition, items }) => {
 	return (
 		<>
-			<ul className={styles.navMenuList}>{navMenuItems}</ul>
+			<NavMenuItems scrollPosition={scrollPosition} items={items} />
 			<div
-				className={`${styles.navMenuPhone} ${
-					scrollPosition > FIXED_NAV_SCROLL_THRESHOLD &&
-					styles.navMenuPhoneFixed
-				}`}>
+				className={cn(styles.navMenuPhone, {
+					[styles.navMenuPhoneFixed]:
+						scrollPosition > FIXED_NAV_SCROLL_THRESHOLD
+				})}>
 				<Link href='tel:+79999999999'>+7 999 999 99 99</Link>
 			</div>
 		</>

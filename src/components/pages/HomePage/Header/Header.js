@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
+import cn from 'classnames'
+
+import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
+
+import Logo from '@/components/common/Logo/Logo';
+import NavMenu from '@/components/common/NavMenu/NavMenu';
 
 import styles from './Header.module.scss'
-
-import { Logo, NavMenu } from '@/components/common'
-import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 
 const navMenuItems = [
 	{ text: 'Туры', link: '#tour' },
@@ -32,10 +35,10 @@ const Header = () => {
 
 	return (
 		<header
-			className={`${styles.header} ${
-				scrollPosition > FIXED_NAV_SCROLL_THRESHOLD &&
-				styles.headerFixed
-			}`}>
+			className={cn(styles.header, {
+				[styles.headerFixed]:
+					scrollPosition > FIXED_NAV_SCROLL_THRESHOLD
+			})}>
 			<div className='container'>
 				<nav className={styles.nav}>
 					<div className={styles.navWrapper}>

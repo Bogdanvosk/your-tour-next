@@ -17,20 +17,9 @@
 		}
 	}
 
-	&MenuPhone::before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0;
-		height: 1px;
-		background-color: variables.$color-white;
-		opacity: 0;
-		transition: width 0.3s ease, opacity 0.3s ease;
-	}
-
 	&MenuPhone {
 		position: relative;
+		@include mixins.underlined(variables.$color-white);
 
 		&Fixed::before {
 			background-color: variables.$color-black;
@@ -39,10 +28,5 @@
 		@media (max-width: variables.$sm) {
 			font-size: 1rem;
 		}
-	}
-
-	&MenuPhone:hover::before {
-		width: 100%;
-		opacity: 1;
 	}
 }

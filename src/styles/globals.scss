@@ -22,11 +22,18 @@ section {
 }
 
 .title {
-	@include mixins.title;
+	text-align: center;
 }
 
 .subtitle {
-	@include mixins.subtitle;
+	max-width: 450px;
+	margin: 1.88rem auto 0;
+	text-align: center;
+	color: variables.$color-gray-300;
+
+	@media (max-width: variables.$sm) {
+		margin-top: 1.25rem;
+	}
 }
 
 .normal,

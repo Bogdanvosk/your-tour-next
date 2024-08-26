@@ -1,6 +1,7 @@
-import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
+
+import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 
 const Logo = ({ scrollPosition }) => {
 	const [screenWidth, setWidth] = useState(0)
