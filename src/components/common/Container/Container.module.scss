@@ -4,11 +4,11 @@
 .container {
 	@include mixins.container(1170px, 55px);
 
-	@media (max-width: variables.$lg) {
+	@include mixins.tablet {
 		@include mixins.container(1170px, 53px);
 	}
 
-	@media (max-width: variables.$sm) {
+	@include mixins.mobile {
 		@include mixins.container(1170px, 21px);
 	}
 }

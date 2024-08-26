@@ -16,7 +16,7 @@ button {
 section {
 	margin-top: 8.44rem;
 
-	@media (max-width: variables.$sm) {
+	@include mixins.mobile {
 		margin-top: 4.69rem;
 	}
 }
@@ -31,7 +31,7 @@ section {
 	text-align: center;
 	color: variables.$color-gray-300;
 
-	@media (max-width: variables.$sm) {
+	@include mixins.mobile {
 		margin-top: 1.25rem;
 	}
 }

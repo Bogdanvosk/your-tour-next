@@ -22,7 +22,7 @@
 	font-size: 1.25rem;
 	line-height: 1.42;
 
-	@media (max-width: variables.$sm) {
+	@include mixins.mobile {
 		padding-top: 2.03rem;
 	}
 
@@ -35,7 +35,7 @@
 			color: variables.$color-black;
 			@include mixins.container(1170px, 55px);
 
-			@media (max-width: variables.$sm) {
+			@include mixins.mobile {
 				@include mixins.container(1170px, 20px);
 			}
 		}

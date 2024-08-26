@@ -5,10 +5,6 @@
 	cursor: pointer;
 	border: none;
 	transition: color 0.3s ease, background-color 0.3s ease;
-
-	@media (max-width: variables.$sm) {
-		font-size: 1rem;
-	}
 }
 
 .infoButton {
@@ -32,7 +28,8 @@
 		background-color: variables.$color-orange-100;
 	}
 
-	@media (max-width: variables.$sm) {
+	@include mixins.mobile {
+		font-size: 1rem;
 		margin-top: 2.5rem;
 	}
 }
@@ -47,7 +44,8 @@
 	background-color: transparent;
 	border-radius: 50px;
 
-	@media (max-width: variables.$sm) {
+	@include mixins.mobile {
+		font-size: 1rem;
 		line-height: 1.42;
 	}
 }
@@ -57,7 +55,7 @@
 	top: 14px;
 	right: 23px;
 
-	@media (max-width: variables.$sm) {
+	@include mixins.mobile {
 		top: 10px;
 	}
 }

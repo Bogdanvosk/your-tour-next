@@ -8,7 +8,7 @@
 		justify-content: center;
 		gap: 3.13rem;
 
-		@media (max-width: variables.$lg) {
+		@include mixins.tablet {
 			gap: 1.88rem;
 		}
 
@@ -25,7 +25,7 @@
 			background-color: variables.$color-black;
 		}
 
-		@media (max-width: variables.$sm) {
+		@include mixins.mobile {
 			font-size: 1rem;
 		}
 	}

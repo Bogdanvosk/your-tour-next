@@ -22,7 +22,7 @@
 	}
 
 	&Title {
-		@media (max-width: variables.$sm) {
+		@include mixins.mobile {
 			max-width: 360px;
 		}
 	}
@@ -32,11 +32,11 @@
 		margin-top: 3.13rem;
 		color: variables.$color-white;
 
-		@media (max-width: variables.$lg) {
+		@include mixins.tablet {
 			max-width: 450px;
 		}
 
-		@media (max-width: variables.$sm) {
+		@include mixins.mobile {
 			max-width: 310px;
 			margin-top: 2.5rem;
 		}
