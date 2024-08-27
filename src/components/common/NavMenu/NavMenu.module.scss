@@ -3,9 +3,7 @@
 
 .nav {
 	&MenuList {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include mixins.centered;
 		gap: 3.13rem;
 
 		@include mixins.tablet {

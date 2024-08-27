@@ -1,0 +1,50 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.tab {
+	position: relative;
+	font-weight: 700;
+	font-size: 1.43rem;
+	line-height: 1.22;
+	background: transparent;
+	border: none;
+	transition: color 0.3s ease;
+	cursor: pointer;
+
+	@include mixins.mobile {
+		font-size: 16px;
+		line-height: 1.42;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -6px;
+		width: 0;
+		height: 2px;
+		background-color: variables.$color-black;
+		opacity: 0;
+		transition: width 0.3s ease, opacity 0.3s ease,
+			background-color 0.3s ease;
+
+		@include mixins.mobile {
+			bottom: 0;
+		}
+	}
+
+	&:not(&Active):hover::before {
+		width: 100%;
+		opacity: 1;
+	}
+
+	&Active {
+		color: variables.$color-orange-200;
+	}
+
+	&Active::before {
+		width: 100%;
+		background-color: variables.$color-orange-200;
+		opacity: 1;
+	}
+}
