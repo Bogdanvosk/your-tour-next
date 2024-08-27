@@ -3,9 +3,7 @@
 
 .info {
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include mixins.centered;
 	height: 100vh;
 	margin-top: 0;
 	color: variables.$color-white;
