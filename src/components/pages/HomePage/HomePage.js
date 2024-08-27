@@ -1,5 +1,6 @@
 import Header from './Header/Header'
 import Info from './Info/Info'
+import Tour from './Tour/Tour'
 
 const HomePage = () => {
 	return (
@@ -7,6 +8,7 @@ const HomePage = () => {
 			<Header />
 			<main>
 				<Info />
+				<Tour />
 			</main>
 		</>
 	)
