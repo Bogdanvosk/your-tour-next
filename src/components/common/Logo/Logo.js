@@ -1,43 +1,37 @@
-import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants';
-import Image from 'next/image'
-import React from 'react'
+import { useEffect, useState } from 'react'
+import cn from 'classnames'
+
+import { getIcon } from '@/utils/getIcon'
+import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
+
+import styles from './Logo.module.scss'
 
 const Logo = ({ scrollPosition }) => {
+	const LogoIcon = getIcon('logo')
+	const [screenWidth, setWidth] = useState(0)
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWidth(window.innerWidth)
+		}
+
+		window.addEventListener('resize', handleResize)
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
+
 	return (
 		<a href='#'>
-			<picture>
-				{scrollPosition > FIXED_NAV_SCROLL_THRESHOLD ? (
-					<>
-						<source
-							srcSet='/images/logo-black-small.svg'
-							media='(max-width: 640px)'
-						/>
-						<source
-							srcSet='/images/logo-black.svg'
-							media='(min-width: 640px)'
-						/>
-					</>
-				) : (
-					<>
-						<source
-							srcSet='/images/logo-small.svg'
-							media='(max-width: 640px)'
-						/>
-						<source
-							srcSet='/images/logo.svg'
-							media='(min-width: 640px)'
-						/>
-					</>
+			<LogoIcon
+				className={cn(
+					{
+						[styles.fixedLogo]:
+							scrollPosition > FIXED_NAV_SCROLL_THRESHOLD
+					},
+					{ [styles.smallLogo]: screenWidth < 640 }
 				)}
-
-				<Image
-					width={182}
-					height={30}
-					priority={true}
-					src='/images/logo.svg'
-					alt='logo'
-				/>
-			</picture>
+			/>
 		</a>
 	)
 }

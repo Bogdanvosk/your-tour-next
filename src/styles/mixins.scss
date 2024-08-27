@@ -1,43 +1,10 @@
+@use 'variables';
+
 @mixin p-mobile {
-	@media (max-width: $sm) {
+	@media (max-width: variables.$sm) {
 		font-size: 1rem;
 		line-height: 1.42;
 	}
-}
-
-@mixin reset {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-@mixin list-reset {
-	margin: 0;
-	padding: 0;
-
-	list-style: none;
-}
-
-@mixin link-reset {
-	color: inherit;
-
-	text-decoration: none;
-}
-
-@mixin hidden {
-	position: absolute;
-
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-
-	border: 0;
-
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
 }
 
 @mixin container($width, $padding) {
@@ -46,59 +13,33 @@
 	padding: 0 $padding;
 }
 
-@mixin title {
-	text-align: center;
-}
-
-@mixin subtitle {
-	max-width: 450px;
-	margin: 1.88rem auto 0;
-
-	text-align: center;
-
-	color: $color-gray-300;
-
-	@media (max-width: $sm) {
-		margin-top: 1.25rem;
-	}
-}
-
-@mixin extra-button {
-	padding: 7px 60px 7px 20px;
-
-	font-weight: 700;
-	font-size: 23px;
-	line-height: 28px;
-
-	color: $color-white;
-	background-color: transparent;
-	border: none;
-	border-radius: 50px;
-
-	transition: $main-transition;
-
-	@media (max-width: $sm) {
-		font-size: 1rem;
-		line-height: 1.42;
-	}
-
-	&::after {
+@mixin underlined($color) {
+	&::before {
 		content: '';
-
 		position: absolute;
-		top: 13px;
-		right: 22px;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $color;
+		opacity: 0;
+		transition: width 0.3s ease, opacity 0.3s ease;
+	}
 
-		width: 24px;
-		height: 26px;
+	&:hover::before {
+		width: 100%;
+		opacity: 1;
+	}
+}
 
-		background-image: url('/icons/arrow-right.svg');
-		background-repeat: no-repeat;
-		
-		transition: $main-transition;
+@mixin mobile {
+	@media (max-width: variables.$sm) {
+		@content;
+	}
+}
 
-		@media (max-width: $sm) {
-			top: 10px;
-		}
+@mixin tablet {
+	@media (max-width: variables.$lg) {
+		@content;
 	}
 }

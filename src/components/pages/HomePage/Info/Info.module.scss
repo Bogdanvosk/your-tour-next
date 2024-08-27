@@ -1,0 +1,44 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.info {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin-top: 0;
+	color: variables.$color-white;
+	background-image: url('/images/header-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&Wrapper {
+		display: flex;
+		padding-top: 4.5rem;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&Title {
+		@include mixins.mobile {
+			max-width: 360px;
+		}
+	}
+
+	&Subtitle {
+		max-width: 610px;
+		margin-top: 3.13rem;
+		color: variables.$color-white;
+
+		@include mixins.tablet {
+			max-width: 450px;
+		}
+
+		@include mixins.mobile {
+			max-width: 310px;
+			margin-top: 2.5rem;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.button {
+	cursor: pointer;
+	border: none;
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.infoButton {
+	margin-top: 3.13rem;
+	padding: 5px 20px;
+	font-size: 1.06rem;
+	line-height: 1.42;
+	font-weight: normal;
+	letter-spacing: -0.01em;
+	color: variables.$color-black;
+	background-color: variables.$color-white;
+	border-radius: 10px;
+
+	&:hover {
+		color: variables.$color-white;
+		background-color: variables.$color-orange-200;
+	}
+
+	&:active {
+		color: variables.$color-black;
+		background-color: variables.$color-orange-100;
+	}
+
+	@include mixins.mobile {
+		font-size: 1rem;
+		margin-top: 2.5rem;
+	}
+}
+
+.extraButton {
+	position: relative;
+	padding: 7px 60px 7px 20px;
+	font-weight: 700;
+	font-size: 1.44rem;
+	line-height: 1.21;
+	color: variables.$color-white;
+	background-color: transparent;
+	border-radius: 50px;
+
+	@include mixins.mobile {
+		font-size: 1rem;
+		line-height: 1.42;
+	}
+}
+
+.arrowRight {
+	position: absolute;
+	top: 14px;
+	right: 23px;
+
+	@include mixins.mobile {
+		top: 10px;
+	}
+}

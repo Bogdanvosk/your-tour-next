@@ -1,0 +1,10 @@
+@use '@/styles/variables';
+
+.fixedLogo {
+	color: variables.$color-black;
+}
+
+.smallLogo {
+	width: 133px;
+	height: 22px;
+}
