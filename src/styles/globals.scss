@@ -21,47 +21,6 @@ section {
 	}
 }
 
-.title {
-	text-align: center;
-}
-
-.subtitle {
-	max-width: 450px;
-	margin: 1.88rem auto 0;
-	text-align: center;
-	color: variables.$color-gray-300;
-
-	@include mixins.mobile {
-		margin-top: 1.25rem;
-	}
-}
-
-.normal,
-.small {
-	font-weight: 400;
-	line-height: 1.42;
-}
-
-.big {
-	font-weight: 700;
-	font-size: 1.44rem;
-	line-height: 1.22;
-
-	@include mixins.p-mobile;
-}
-
-.normal {
-	font-size: 20px;
-
-	@include mixins.p-mobile;
-}
-
-.small {
-	font-size: 1.06rem;
-	letter-spacing: -0.01em;
-
-	@include mixins.p-mobile;
-}
 
 .main {
 	position: static;

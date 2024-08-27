@@ -10,13 +10,16 @@ const Info = () => {
 			<Container>
 				<div className={styles.infoWrapper}>
 					<Typography
-						variant='h1'
-						className={`${styles.infoTitle} title`}>
+						tag='h1'
+						variant='title'
+						className={`${styles.infoTitle}`}>
 						Идеальные путешествия существуют
 					</Typography>
 					<Typography
-						variant='p'
-						className={`${styles.infoSubtitle} subtitle normal`}>
+						tag='p'
+						variant='subtitle'
+						size='normal'
+						className={`${styles.infoSubtitle}`}>
 						Идейные соображения высшего порядка, а также рамки и
 						место обучения кадров
 					</Typography>
