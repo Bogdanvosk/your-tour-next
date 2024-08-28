@@ -1,3 +1,4 @@
+import Find from './Find/Find';
 import Header from './Header/Header'
 import Info from './Info/Info'
 import Tour from './Tour/Tour'
@@ -5,10 +6,11 @@ import Tour from './Tour/Tour'
 const HomePage = () => {
 	return (
 		<>
-			<Header />
+			{/* <Header /> */}
 			<main>
-				<Info />
-				<Tour />
+				{/* <Info />
+				<Tour /> */}
+				<Find />
 			</main>
 		</>
 	)

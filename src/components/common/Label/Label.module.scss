@@ -1,0 +1,23 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	cursor: pointer;
+
+	@include mixins.mobile {
+		gap: 0.44rem;
+	}
+}
+
+.span {
+	font-size: 1.25rem;
+	line-height: 1.42;
+
+	@include mixins.mobile {
+		font-size: 1rem;
+	}
+}

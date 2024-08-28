@@ -1,0 +1,14 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.textarea {
+	max-width: 100%;
+	min-height: 152px;
+
+	@include mixins.input;
+
+	@include mixins.mobile {
+		resize: none;
+		min-height: 132px;
+	}
+}

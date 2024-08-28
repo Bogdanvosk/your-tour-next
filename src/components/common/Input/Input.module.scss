@@ -1,0 +1,18 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.input {
+	@include mixins.input;
+
+	&[type='date'] {
+		text-transform: uppercase;
+	}
+
+	&[type='date'].incorrect {
+		color: variables.$color-gray-300;
+	}
+}
+
+.incorrect {
+	color: variables.$color-gray-300;
+}
