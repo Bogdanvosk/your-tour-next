@@ -59,3 +59,46 @@
 		top: 10px;
 	}
 }
+
+.formButton {
+	cursor: pointer;
+	padding: 0.94rem 4.44rem;
+	font-size: 1.25rem;
+	line-height: 1.42;
+	color: variables.$color-white;
+	background-color: variables.$color-green-400;
+	border: none;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
+
+	@include mixins.mobile {
+		padding: 12px 30px;
+		font-size: 1rem;
+	}
+
+	@media (max-width: 359px) {
+		padding: 12px 20px;
+		font-size: 0.9rem;
+	}
+
+	&:hover {
+		background-color: variables.$color-green-300;
+	}
+
+	&:active {
+		background-color: variables.$color-green-200;
+	}
+
+	&.reset {
+		color: variables.$color-green-400;
+		background-color: variables.$color-green-100;
+
+		&:hover {
+			background-color: variables.$color-gray-100;
+		}
+
+		&:active {
+			background-color: variables.$color-gray-200;
+		}
+	}
+}

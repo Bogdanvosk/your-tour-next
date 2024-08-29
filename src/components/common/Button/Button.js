@@ -23,7 +23,12 @@ const Button = ({
 		<button
 			{...props}
 			type={type}
-			className={cn(styles.button, buttonVariants[variant], className)}>
+			className={cn(
+				styles.button,
+				buttonVariants[variant],
+				{ [styles.reset]: type === 'reset' },
+				className
+			)}>
 			{children}
 			{variant === 'extra' && (
 				<ArrowRight className={styles.arrowRight} />

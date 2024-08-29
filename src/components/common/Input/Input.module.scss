@@ -8,11 +8,17 @@
 		text-transform: uppercase;
 	}
 
-	&[type='date'].incorrect {
-		color: variables.$color-gray-300;
+	&[type='number']::-webkit-outer-spin-button,
+	&[type='number']::-webkit-inner-spin-button {
+		margin: 0;
+		-webkit-appearance: none;
 	}
 }
 
 .incorrect {
 	color: variables.$color-gray-300;
+}
+
+.hiddenInput {
+	display: none;
 }

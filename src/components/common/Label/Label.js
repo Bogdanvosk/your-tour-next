@@ -2,11 +2,29 @@ import cn from 'classnames'
 
 import styles from './Label.module.scss'
 
-const Label = ({ title = '', htmlFor, children, className = '' }) => {
-	// TODO: add prop "withSpan" and paint span if true, else paint children
+const Label = ({
+	labelValue,
+	children,
+	isRadio = false,
+	title = '',
+	radioValue = '',
+	className = ''
+}) => {
 	return (
-		<label htmlFor={htmlFor} className={cn(styles.label, className)}>
-			{title !== '' && <span className={styles.span}>{title}</span>}
+		<label
+			className={cn(
+				styles.label,
+				{ [styles.radioLabel]: isRadio },
+				className
+			)}>
+			{title !== '' && (
+				<span
+					className={cn(styles.span, {
+						[styles.checked]: radioValue === labelValue
+					})}>
+					{title}
+				</span>
+			)}
 			{children}
 		</label>
 	)

@@ -21,6 +21,10 @@
 	&:invalid:not(:focus) {
 		color: gray;
 	}
+
+	.default {
+		color: gray;
+	}
 }
 
 .arrowBottom {
