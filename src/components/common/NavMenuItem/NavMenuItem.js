@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 
