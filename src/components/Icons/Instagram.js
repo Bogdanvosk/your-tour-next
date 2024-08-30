@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Instagram = ({ className }) => {
 	return (
 		<svg
@@ -16,3 +18,7 @@ const Instagram = ({ className }) => {
 }
 
 export default Instagram
+
+Instagram.propTypes = {
+	className: PropTypes.string
+}

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import PropTypes from 'prop-types'
 
 const HeadLayout = ({ favicon, title }) => {
 	return (
@@ -28,3 +29,8 @@ const HeadLayout = ({ favicon, title }) => {
 }
 
 export default HeadLayout
+
+HeadLayout.propTypes = {
+	favicon: PropTypes.string,
+	title: PropTypes.string
+}

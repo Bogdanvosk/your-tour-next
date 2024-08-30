@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
-import { getIcon } from '@/utils/getIcon'
 import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
+
+import Icon from '../Icon/Icon'
 
 import styles from './Logo.module.scss'
 
 const Logo = ({ scrollPosition }) => {
-	const LogoIcon = getIcon('logo')
 	const [screenWidth, setWidth] = useState(0)
 
 	useEffect(() => {
+		setWidth(window.innerWidth)
 		const handleResize = () => {
 			setWidth(window.innerWidth)
 		}
@@ -22,8 +25,9 @@ const Logo = ({ scrollPosition }) => {
 	}, [])
 
 	return (
-		<a href='#'>
-			<LogoIcon
+		<Link href='#'>
+			<Icon
+				name='logo'
 				className={cn(
 					{
 						[styles.fixedLogo]:
@@ -32,8 +36,12 @@ const Logo = ({ scrollPosition }) => {
 					{ [styles.smallLogo]: screenWidth < 640 }
 				)}
 			/>
-		</a>
+		</Link>
 	)
 }
 
 export default Logo
+
+Logo.propTypes = {
+	scrollPosition: PropTypes.number
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import TabItem from '../TabItem/TabItem'
 
@@ -26,3 +27,7 @@ const Tabs = ({ items }) => {
 }
 
 export default Tabs
+
+Tabs.propTypes = {
+	items: PropTypes.arrayOf(PropTypes.string)
+}

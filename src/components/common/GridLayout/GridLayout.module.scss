@@ -1,0 +1,18 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 31px 30px;
+
+	@include mixins.tablet {
+		gap: 1.94rem 1.25rem;
+	}
+
+	@media (max-width: variables.$md) {
+		display: flex;
+		flex-direction: column;
+		gap: 1.88rem;
+	}
+}

@@ -1,6 +1,7 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
-import { getIcon } from '@/utils/getIcon'
+import Icon from '../Icon/Icon'
 
 import styles from './Button.module.scss'
 
@@ -17,19 +18,29 @@ const Button = ({
 	className = '',
 	...props
 }) => {
-	const ArrowRight = getIcon('arrowRight')
-
 	return (
 		<button
 			{...props}
 			type={type}
-			className={cn(styles.button, buttonVariants[variant], className)}>
+			className={cn(
+				styles.button,
+				buttonVariants[variant],
+				{ [styles.reset]: type === 'reset' },
+				className
+			)}>
 			{children}
 			{variant === 'extra' && (
-				<ArrowRight className={styles.arrowRight} />
+				<Icon name='arrowRight' className={styles.arrowRight} />
 			)}
 		</button>
 	)
 }
 
 export default Button
+
+Button.propTypes = {
+	children: PropTypes.node,
+	variant: PropTypes.oneOf(['info', 'extra', 'form']),
+	type: PropTypes.oneOf(['button', 'reset', 'submit']),
+	className: PropTypes.string
+}

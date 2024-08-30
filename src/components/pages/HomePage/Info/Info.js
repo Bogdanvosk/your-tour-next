@@ -1,6 +1,6 @@
 import Button from '@/components/common/Button/Button'
 import Container from '@/components/common/Container/Container'
-import Typography from '@/components/common/Typography/Typography'
+import SectionHead from '@/components/common/SectionHead/SectionHead'
 
 import styles from './Info.module.scss'
 
@@ -9,20 +9,15 @@ const Info = () => {
 		<section className={styles.info}>
 			<Container>
 				<div className={styles.infoWrapper}>
-					<Typography
-						tag='h1'
-						variant='title'
-						className={`${styles.infoTitle}`}>
-						Идеальные путешествия существуют
-					</Typography>
-					<Typography
-						tag='p'
-						variant='subtitle'
-						size='normal'
-						className={`${styles.infoSubtitle}`}>
-						Идейные соображения высшего порядка, а также рамки и
-						место обучения кадров
-					</Typography>
+					<SectionHead
+						title='Идеальные путешествия существуют'
+						subtitle='Идейные соображения высшего порядка, а также рамки и место обучения кадров'
+						titleTag='h1'
+						classNames={{
+							title: styles.infoTitle,
+							subtitle: styles.infoSubtitle
+						}}
+					/>
 					<Button variant='info' type='button'>
 						Найти тур
 					</Button>

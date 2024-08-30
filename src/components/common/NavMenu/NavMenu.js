@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 
@@ -38,3 +39,13 @@ const NavMenu = ({ scrollPosition, items }) => {
 }
 
 export default NavMenu
+
+NavMenu.propTypes = {
+	scrollPosition: PropTypes.number,
+	items: PropTypes.arrayOf(
+		PropTypes.shape({
+			link: PropTypes.string,
+			text: PropTypes.string
+		})
+	)
+}

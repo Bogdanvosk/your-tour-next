@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import styles from './Typography.module.scss'
 
@@ -38,3 +39,11 @@ const Typography = ({
 }
 
 export default Typography
+
+Typography.propTypes = {
+	tag: PropTypes.string,
+	variant: PropTypes.string,
+	size: PropTypes.string,
+	className: PropTypes.string,
+	children: PropTypes.node
+}

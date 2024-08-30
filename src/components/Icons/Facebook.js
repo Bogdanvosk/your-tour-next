@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Facebook = ({ className }) => {
 	return (
 		<svg
@@ -16,3 +18,7 @@ const Facebook = ({ className }) => {
 }
 
 export default Facebook
+
+Facebook.propTypes = {
+	className: PropTypes.string
+}

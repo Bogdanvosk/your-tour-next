@@ -1,0 +1,71 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	cursor: pointer;
+
+	@include mixins.mobile {
+		gap: 0.44rem;
+	}
+}
+
+.span {
+	font-size: 1.25rem;
+	line-height: 1.42;
+
+	@include mixins.mobile {
+		font-size: 1rem;
+	}
+}
+
+.radioLabel {
+	position: relative;
+	padding-left: 37px;
+
+	@include mixins.mobile {
+		padding-left: 31px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 26px;
+		height: 26px;
+		border: 2px solid variables.$color-black;
+		border-radius: 100%;
+
+		@include mixins.mobile {
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	& span::after {
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		width: 12px;
+		height: 12px;
+		background-color: variables.$color-black;
+		border-radius: 100%;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+
+		@include mixins.mobile {
+			width: 10px;
+			height: 10px;
+			top: 5px;
+			left: 5px;
+		}
+	}
+
+	& span.checked::after {
+		opacity: 1;
+	}
+}
