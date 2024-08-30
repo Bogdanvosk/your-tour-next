@@ -1,0 +1,56 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.item {
+	max-width: 570px;
+	padding: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: variables.$color-beige-200;
+	border-radius: 50px;
+
+	@include mixins.tablet {
+		width: 100%;
+	}
+
+	@include mixins.mobile {
+		padding: 21px;
+		border-radius: 20px;
+	}
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.author {
+	margin-top: 4.38rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include mixins.mobile {
+		margin-top: 2.5rem;
+		align-items: end;
+	}
+
+	& .tour {
+		margin-top: 0.5rem;
+		color: variables.$color-gray-300;
+	}
+
+	& .avatar {
+		width: 75px;
+		height: 75px;
+		border-radius: 100%;
+		overflow: hidden;
+
+		& .image {
+			display: block;
+			max-width: 100%;
+		}
+	}
+}

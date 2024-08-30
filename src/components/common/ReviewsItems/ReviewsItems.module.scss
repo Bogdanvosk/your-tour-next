@@ -1,0 +1,23 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.items {
+	display: flex;
+	margin-top: 6.25rem;
+	justify-content: center;
+	gap: 1.88rem;
+
+	@include mixins.tablet {
+		gap: 1.13rem;
+	}
+
+	@media (max-width: variables.$md) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@include mixins.mobile {
+		margin-top: 3.13rem;
+		gap: 1.13rem;
+	}
+}

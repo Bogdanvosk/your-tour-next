@@ -1,6 +1,7 @@
-import Find from './Find/Find';
+import Find from './Find/Find'
 import Header from './Header/Header'
 import Info from './Info/Info'
+import Reviews from './Reviews/Reviews'
 import Tour from './Tour/Tour'
 
 const HomePage = () => {
@@ -11,6 +12,7 @@ const HomePage = () => {
 				<Info />
 				<Tour />
 				<Find />
+				<Reviews />
 			</main>
 		</>
 	)
