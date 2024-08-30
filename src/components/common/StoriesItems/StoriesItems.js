@@ -6,7 +6,7 @@ import styles from './StoriesItems.module.scss'
 
 const StoriesItems = ({ items }) => {
 	return (
-		<div class={styles.items}>
+		<div className={styles.items}>
 			{items.map((item, index) => {
 				return <StoriesItem key={index} item={item} />
 			})}
