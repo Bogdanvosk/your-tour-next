@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import styles from './GridLayout.module.scss'
 
@@ -7,3 +8,8 @@ const GridLayout = ({ children, className = '' }) => {
 }
 
 export default GridLayout
+
+GridLayout.propTypes = {
+	children: PropTypes.node,
+	className: PropTypes.string
+}

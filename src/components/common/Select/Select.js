@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import Icon from '../Icon/Icon'
 
@@ -28,3 +29,10 @@ const Select = ({ register, items, placeholder, className = '' }) => {
 }
 
 export default Select
+
+Select.propTypes = {
+	register: PropTypes.object,
+	items: PropTypes.arrayOf(PropTypes.string),
+	placeholder: PropTypes.string,
+	className: PropTypes.string
+}

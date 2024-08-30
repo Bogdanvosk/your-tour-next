@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import styles from './Input.module.scss'
 
@@ -34,3 +35,11 @@ const Input = ({
 }
 
 export default Input
+
+Input.propTypes = {
+	register: PropTypes.object,
+	type: PropTypes.string,
+	placeholder: PropTypes.string,
+	dateValue: PropTypes.string,
+	className: PropTypes.string
+}

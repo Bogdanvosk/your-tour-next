@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import Icon from '../Icon/Icon'
 
@@ -36,3 +37,10 @@ const Button = ({
 }
 
 export default Button
+
+Button.propTypes = {
+	children: PropTypes.node,
+	variant: PropTypes.oneOf(['info', 'extra', 'form']),
+	type: PropTypes.oneOf(['button', 'reset', 'submit']),
+	className: PropTypes.string
+}

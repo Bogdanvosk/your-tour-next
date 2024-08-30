@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import styles from './Label.module.scss'
 
@@ -31,3 +32,12 @@ const Label = ({
 }
 
 export default Label
+
+Label.propTypes = {
+	labelValue: PropTypes.string,
+	children: PropTypes.node,
+	isRadio: PropTypes.bool,
+	title: PropTypes.string,
+	radioValue: PropTypes.string,
+	className: PropTypes.string
+}

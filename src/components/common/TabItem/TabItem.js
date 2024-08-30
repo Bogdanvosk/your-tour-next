@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import styles from './TabItem.module.scss'
 
@@ -19,3 +20,9 @@ const TabItem = ({ item, activeItem, onClick }) => {
 }
 
 export default TabItem
+
+TabItem.propTypes = {
+	item: PropTypes.string,
+	activeItem: PropTypes.string,
+	onClick: PropTypes.func
+}

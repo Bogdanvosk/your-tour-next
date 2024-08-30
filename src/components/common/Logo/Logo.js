@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 
 import { FIXED_NAV_SCROLL_THRESHOLD } from '@/constants'
 
@@ -40,3 +41,7 @@ const Logo = ({ scrollPosition }) => {
 }
 
 export default Logo
+
+Logo.propTypes = {
+	scrollPosition: PropTypes.number
+}

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const LogoIcon = ({ className = '' }) => {
 	return (
 		<svg
@@ -44,3 +46,7 @@ const LogoIcon = ({ className = '' }) => {
 }
 
 export default LogoIcon
+
+LogoIcon.propTypes = {
+	className: PropTypes.string
+}

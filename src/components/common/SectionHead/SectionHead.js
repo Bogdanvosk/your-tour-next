@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import Typography from '../Typography/Typography'
 
 const SectionHead = ({ title, subtitle, classNames = {}, titleTag = 'h2' }) => {
@@ -21,3 +23,13 @@ const SectionHead = ({ title, subtitle, classNames = {}, titleTag = 'h2' }) => {
 }
 
 export default SectionHead
+
+SectionHead.propTypes = {
+	title: PropTypes.string,
+	subtitle: PropTypes.string,
+	classNames: PropTypes.shape({
+		title: PropTypes.string,
+		subtitle: PropTypes.string
+	}),
+	titleTag: PropTypes.string
+}

@@ -18,3 +18,9 @@ const NavMenuItem = ({ link, scrollPosition, children }) => {
 }
 
 export default NavMenuItem
+
+NavMenuItem.propTypes = {
+	link: PropTypes.string,
+	scrollPosition: PropTypes.number,
+	children: PropTypes.node
+}

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const ArrowBottom = ({ className = '' }) => {
 	return (
 		<svg
@@ -18,3 +20,7 @@ const ArrowBottom = ({ className = '' }) => {
 }
 
 export default ArrowBottom
+
+ArrowBottom.propTypes = {
+	className: PropTypes.string
+}
