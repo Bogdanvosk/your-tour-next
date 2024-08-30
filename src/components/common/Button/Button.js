@@ -1,6 +1,6 @@
 import cn from 'classnames'
 
-import { getIcon } from '@/utils/getIcon'
+import Icon from '../Icon/Icon'
 
 import styles from './Button.module.scss'
 
@@ -17,8 +17,6 @@ const Button = ({
 	className = '',
 	...props
 }) => {
-	const ArrowRight = getIcon('arrowRight')
-
 	return (
 		<button
 			{...props}
@@ -31,7 +29,7 @@ const Button = ({
 			)}>
 			{children}
 			{variant === 'extra' && (
-				<ArrowRight className={styles.arrowRight} />
+				<Icon name='arrowRight' className={styles.arrowRight} />
 			)}
 		</button>
 	)

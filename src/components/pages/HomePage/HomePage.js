@@ -6,10 +6,10 @@ import Tour from './Tour/Tour'
 const HomePage = () => {
 	return (
 		<>
-			{/* <Header /> */}
+			<Header />
 			<main>
-				{/* <Info />
-				<Tour /> */}
+				<Info />
+				<Tour />
 				<Find />
 			</main>
 		</>

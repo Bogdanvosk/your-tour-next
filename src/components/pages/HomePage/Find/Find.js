@@ -1,18 +1,16 @@
 import Container from '@/components/common/Container/Container'
-import Typography from '@/components/common/Typography/Typography'
 import Form from '@/components/common/Form/Form'
+import SectionHead from '@/components/common/SectionHead/SectionHead'
 
 const Find = () => {
 	return (
 		<section>
 			<Container>
-				<Typography tag='h2' variant='title'>
-					Собери свой тур
-				</Typography>
-				<Typography tag='p' variant='subtitle' size='normal'>
-					Идейные соображения высшего порядка, а также рамки и место
-					обучения кадров
-				</Typography>
+				<SectionHead
+					title='Собери свой тур'
+					subtitle='Идейные соображения высшего порядка, а также рамки и место
+					обучения кадров'
+				/>
 				<Form />
 			</Container>
 		</section>

@@ -1,6 +1,6 @@
 import cn from 'classnames'
 
-import ArrowBottom from '@/components/Icons/ArrowBottom'
+import Icon from '../Icon/Icon'
 
 import styles from './Select.module.scss'
 
@@ -22,7 +22,7 @@ const Select = ({ register, items, placeholder, className = '' }) => {
 				</option>
 				{mappedOptions}
 			</select>
-			<ArrowBottom className={styles.arrowBottom} />
+			<Icon name='arrowBottom' className={styles.arrowBottom} />
 		</div>
 	)
 }
