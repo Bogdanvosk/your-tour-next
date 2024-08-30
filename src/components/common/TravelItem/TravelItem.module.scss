@@ -1,0 +1,51 @@
+@use '@/styles/mixins';
+@import '@/styles/variables';
+
+.item {
+	width: 23.13vw;
+	height: 15.68vw;
+	border-radius: 2.6vw;
+	overflow: hidden;
+
+	@include mixins.tablet {
+		width: 30.73vw;
+		height: 29.2vw;
+		border-radius: 4.9vw;
+	}
+
+	@include mixins.mobile {
+		width: 42.78vw;
+		height: 30.6vw;
+		border-radius: 5.6vw;
+	}
+}
+
+.narrow {
+	width: 18.1vw;
+	@include mixins.tablet {
+		width: 22.6vw;
+	}
+
+	@include mixins.mobile {
+		width: 27.6vw;
+	}
+}
+
+.lg {
+	@include mixins.tablet {
+		display: none;
+	}
+}
+
+.sm {
+	@include mixins.mobile {
+		display: none;
+	}
+}
+
+.image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
