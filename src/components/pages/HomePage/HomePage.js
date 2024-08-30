@@ -1,3 +1,4 @@
+import Action from './Action/Action'
 import Find from './Find/Find'
 import Header from './Header/Header'
 import Info from './Info/Info'
@@ -14,9 +15,10 @@ const HomePage = () => {
 				<Info />
 				<Tour />
 				<Find />
-				<Reviews /> 
+				<Reviews />
 				<Travel />
 				<Stories />
+				<Action />
 			</main>
 		</>
 	)
