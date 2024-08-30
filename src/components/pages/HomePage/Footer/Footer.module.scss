@@ -1,0 +1,30 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.footer {
+	margin-top: 135px;
+	padding: 1.88rem 0;
+	background-color: variables.$color-beige-200;
+
+	@include mixins.mobile {
+		margin-top: 4.69rem;
+		padding: 1.25rem 0;
+	}
+}
+
+.title {
+	color: variables.$color-gray-300;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@media (max-width: variables.$md) {
+		justify-content: center;
+		flex-direction: column;
+		gap: 0.44rem;
+	}
+}

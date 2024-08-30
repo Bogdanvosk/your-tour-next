@@ -1,5 +1,6 @@
 import Action from './Action/Action'
 import Find from './Find/Find'
+import Footer from './Footer/Footer';
 import Header from './Header/Header'
 import Info from './Info/Info'
 import Reviews from './Reviews/Reviews'
@@ -20,6 +21,7 @@ const HomePage = () => {
 				<Stories />
 				<Action />
 			</main>
+			<Footer />
 		</>
 	)
 }
