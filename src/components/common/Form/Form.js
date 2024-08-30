@@ -40,35 +40,40 @@ const Form = () => {
 			<GridLayout>
 				<Label title='Имя'>
 					<Input
-						register={register('name')}
+						register={register('name', { required: true })}
 						type='text'
 						placeholder='Введите Ваше имя'
 					/>
 				</Label>
 				<Label title='Направление'>
 					<Select
-						register={register('city')}
+						register={register('city', { required: true })}
 						items={cities}
 						placeholder='Куда хотите ехать'
 					/>
 				</Label>
 				<Label title='Email'>
 					<Input
-						register={register('email')}
+						register={register('email', { required: true })}
 						type='email'
 						placeholder='example@mail.com'
 					/>
 				</Label>
 				<Label title='Телефон'>
 					<Input
-						register={register('phone')}
+						register={register('phone', {
+							required: true,
+							onChange: e => {
+								e.target.value = e.target.value.slice(0, 11)
+							}
+						})}
 						type='number'
 						placeholder='+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _'
 					/>
 				</Label>
 				<Label title='Дата от'>
 					<Input
-						register={register('date-from')}
+						register={register('date-from', { required: true })}
 						dateValue={dateFrom}
 						type='date'
 						max='9999-12-31'
@@ -77,7 +82,7 @@ const Form = () => {
 				</Label>
 				<Label title='Дата до'>
 					<Input
-						register={register('date-to')}
+						register={register('date-to', { required: true })}
 						dateValue={dateTo}
 						type='date'
 						max='9999-12-31'
@@ -96,7 +101,7 @@ const Form = () => {
 							radioValue={age}
 							isRadio>
 							<Input
-								register={register('age')}
+								register={register('age', { required: true })}
 								type='radio'
 								value='YES'
 							/>
@@ -108,7 +113,7 @@ const Form = () => {
 							radioValue={age}
 							isRadio>
 							<Input
-								register={register('age')}
+								register={register('age', { required: true })}
 								type='radio'
 								value='NO'
 							/>
@@ -118,7 +123,7 @@ const Form = () => {
 
 				<Label className={styles.labelTerms}>
 					<Input
-						register={register('agree')}
+						register={register('agree', { required: true })}
 						type='checkbox'
 						className={styles.checkInput}
 					/>
