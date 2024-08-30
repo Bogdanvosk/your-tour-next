@@ -4,8 +4,6 @@ import cn from 'classnames'
 import styles from './TravelItem.module.scss'
 
 const TravelItem = ({ img, size, hidden }) => {
-	console.log('hidden', hidden)
-
 	return (
 		<div
 			className={cn(styles.item, {

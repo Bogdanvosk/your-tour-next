@@ -1,0 +1,15 @@
+@use '@/styles/variables';
+@use '@/styles/mixins';
+
+.items {
+	margin-top: 6.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3.13rem;
+
+	@include mixins.mobile {
+		margin-top: 3.13rem;
+		gap: 1.25rem;
+	}
+}
