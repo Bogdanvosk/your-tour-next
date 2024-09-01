@@ -61,14 +61,9 @@ const Form = () => {
 				</Label>
 				<Label title='Телефон'>
 					<Input
-						register={register('phone', {
-							required: true,
-							onChange: e => {
-								e.target.value = e.target.value.slice(0, 11)
-							}
-						})}
-						type='number'
-						placeholder='+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _'
+						register={register('phone', { required: true })}
+						type='text'
+						isPhone
 					/>
 				</Label>
 				<Label title='Дата от'>
