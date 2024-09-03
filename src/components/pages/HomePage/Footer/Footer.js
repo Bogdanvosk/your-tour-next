@@ -1,23 +1,10 @@
+import { content } from '@/content'
+
 import Container from '@/components/common/Container/Container'
 import Typography from '@/components/common/Typography/Typography'
 import SocialLinks from '@/components/common/SocialLinks/SocialLinks'
 
 import styles from './Footer.module.scss'
-
-const socialLinks = [
-	{
-		text: 'instagram',
-		iconName: 'instagram'
-	},
-	{
-		text: 'facebook',
-		iconName: 'facebook'
-	},
-	{
-		text: 'vkontakte',
-		iconName: 'vk'
-	}
-]
 
 const Footer = () => {
 	return (
@@ -27,7 +14,7 @@ const Footer = () => {
 					<Typography tag='p' size='normal' className={styles.title}>
 						Наши социальные сети
 					</Typography>
-					<SocialLinks socialLinks={socialLinks} />
+					<SocialLinks socialLinks={content.footer.socialLinks} />
 				</div>
 			</Container>
 		</footer>

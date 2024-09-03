@@ -27,13 +27,15 @@ const Form = () => {
 	const { register, handleSubmit, watch } = useForm()
 
 	const onSubmit = data => {
-		console.log(data)
+		const newData = { ...data, adult: data.adult === 'YES' ? true : false }
+
+		console.log(newData)
 	}
 
 	const dateFrom = watch('date-from')
 	const dateTo = watch('date-to')
 	const agree = watch('agree')
-	const age = watch('age')
+	const adult = watch('adult')
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -93,10 +95,10 @@ const Form = () => {
 						<Label
 							title='Да'
 							labelValue='YES'
-							radioValue={age}
+							radioValue={adult}
 							isRadio>
 							<Input
-								register={register('age', { required: true })}
+								register={register('adult', { required: true })}
 								type='radio'
 								value='YES'
 							/>
@@ -105,10 +107,10 @@ const Form = () => {
 						<Label
 							title='Нет'
 							labelValue='NO'
-							radioValue={age}
+							radioValue={adult}
 							isRadio>
 							<Input
-								register={register('age', { required: true })}
+								register={register('adult', { required: true })}
 								type='radio'
 								value='NO'
 							/>

@@ -1,3 +1,5 @@
+import { content } from '@/content'
+
 import Button from '@/components/common/Button/Button'
 import Container from '@/components/common/Container/Container'
 import SectionHead from '@/components/common/SectionHead/SectionHead'
@@ -10,8 +12,8 @@ const Info = () => {
 			<Container>
 				<div className={styles.infoWrapper}>
 					<SectionHead
-						title='Идеальные путешествия существуют'
-						subtitle='Идейные соображения высшего порядка, а также рамки и место обучения кадров'
+						title={content.info.title}
+						subtitle={content.info.subtitle}
 						titleTag='h1'
 						classNames={{
 							title: styles.infoTitle,
