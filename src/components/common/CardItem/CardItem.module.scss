@@ -9,20 +9,18 @@
 	color: variables.$color-white;
 	transition: background-color 0.3s ease;
 
-	&:hover .button {
-		background-color: variables.$color-green-400;
+	@include mixins.hover {
+		.button {
+			background-color: variables.$color-green-400;
+		}
+
+		.image {
+			transform: scale(1.2);
+		}
 	}
 
 	&:active .button {
 		background-color: variables.$color-orange-200;
-	}
-
-	&:hover .button::after {
-		transform: translateX(5px);
-	}
-
-	&:hover .image {
-		transform: scale(1.2);
 	}
 
 	@media (max-width: variables.$md) {
@@ -98,7 +96,6 @@
 	position: absolute;
 	left: 30px;
 	bottom: 40px;
-
 
 	padding: 7px 62px 6px 19px;
 

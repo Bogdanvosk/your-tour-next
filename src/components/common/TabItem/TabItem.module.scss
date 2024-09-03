@@ -33,9 +33,13 @@
 		}
 	}
 
-	&:not(&Active):hover::before {
-		width: 100%;
-		opacity: 1;
+	&:not(&Active) {
+		@include mixins.hover {
+			&::before {
+				width: 100%;
+				opacity: 1;
+			}
+		}
 	}
 
 	&Active {

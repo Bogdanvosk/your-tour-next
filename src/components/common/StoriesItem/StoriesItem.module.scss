@@ -25,20 +25,18 @@
 		border-radius: 20px;
 	}
 
-	&:hover .image {
-		transform: scale(1.2);
-	}
+	@include mixins.hover {
+		.image {
+			transform: scale(1.2);
+		}
 
-	&:hover .button {
-		background-color: variables.$color-green-400;
+		.button {
+			background-color: variables.$color-green-400;
+		}
 	}
 
 	&:active .button {
 		background-color: variables.$color-orange-200;
-	}
-
-	&:hover .button::after {
-		transform: translateX(5px);
 	}
 }
 
@@ -125,10 +123,6 @@
 	left: 38px;
 	font-size: 1.38rem;
 
-	&::after {
-		right: 19px;
-	}
-
 	@include mixins.mobile {
 		left: 10px;
 		bottom: 24px;
@@ -153,16 +147,18 @@
 			background-color 0.3s ease;
 	}
 
-	&:hover::after {
-		width: 100%;
-		opacity: 1;
+	@include mixins.hover {
+		&::after {
+			width: 100%;
+			opacity: 1;
+		}
 	}
 
 	&:active {
 		color: variables.$color-orange-200;
-	}
 
-	&:active::after {
-		background-color: variables.$color-orange-200;
+		&::after {
+			background-color: variables.$color-orange-200;
+		}
 	}
 }
