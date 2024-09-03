@@ -1,6 +1,5 @@
 import cn from 'classnames'
 import PropTypes from 'prop-types'
-
 import InputMask from 'react-input-mask'
 
 import styles from './Input.module.scss'

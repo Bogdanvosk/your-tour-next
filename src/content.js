@@ -57,7 +57,44 @@ export const content = {
 	find: {
 		title: 'Собери свой тур',
 		subtitle:
-			'Идейные соображения высшего порядка, а также рамки и место обучения кадров'
+			'Идейные соображения высшего порядка, а также рамки и место обучения кадров',
+		cities: [
+			'Сараево',
+			'Стамбул',
+			'Банско',
+			'Лейпциг',
+			'Пелопоннес',
+			'Будапешт',
+			'Палермо',
+			'Трансильвания',
+			'Котор'
+		],
+		inputs: [
+			{
+				title: 'Имя',
+				formName: 'name',
+				type: 'text',
+				placeholder: 'Введите ваше имя'
+			},
+			{
+				title: 'Направление',
+				formName: 'city',
+				type: null,
+				placeholder: 'Куда хотите ехать'
+			},
+			{
+				title: 'Email',
+				formName: 'email',
+				type: 'email',
+				placeholder: 'example@mail.com'
+			},
+			{
+				title: 'Телефон',
+				formName: 'phone',
+				type: null,
+				placeholder: null
+			}
+		]
 	},
 	reviews: {
 		title: 'Отзывы наших путешественников',
