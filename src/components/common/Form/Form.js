@@ -1,5 +1,7 @@
 import Link from 'next/link'
+
 import { useForm } from 'react-hook-form'
+import { content } from '@/content'
 
 import Typography from '@/components/common/Typography/Typography'
 import Label from '@/components/common/Label/Label'
@@ -11,81 +13,86 @@ import Button from '@/components/common/Button/Button'
 
 import styles from './Form.module.scss'
 
-const cities = [
-	'Сараево',
-	'Стамбул',
-	'Банско',
-	'Лейпциг',
-	'Пелопоннес',
-	'Будапешт',
-	'Палермо',
-	'Трансильвания',
-	'Котор'
-]
-
 const Form = () => {
 	const { register, handleSubmit, watch } = useForm()
 
 	const onSubmit = data => {
-		console.log(data)
+		const newData = { ...data, adult: data.adult === 'YES' ? true : false }
+		console.log(newData)
 	}
 
 	const dateFrom = watch('date-from')
 	const dateTo = watch('date-to')
 	const agree = watch('agree')
-	const age = watch('age')
+	const adult = watch('adult')
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 			<GridLayout>
-				<Label title='Имя'>
-					<Input
-						register={register('name', { required: true })}
-						type='text'
-						placeholder='Введите Ваше имя'
-					/>
-				</Label>
-				<Label title='Направление'>
-					<Select
-						register={register('city', { required: true })}
-						items={cities}
-						placeholder='Куда хотите ехать'
-					/>
-				</Label>
-				<Label title='Email'>
-					<Input
-						register={register('email', { required: true })}
-						type='email'
-						placeholder='example@mail.com'
-					/>
-				</Label>
-				<Label title='Телефон'>
-					<Input
-						register={register('phone', { required: true })}
-						type='text'
-						isPhone
-					/>
-				</Label>
+				{content.find.inputs.map((input, index) => {
+					return (
+						<Label
+							key={`${input.title}_${index}`}
+							title={input.title}>
+							{input.formName === 'city' && (
+								<Select
+									register={register(input.title, {
+										required: true
+									})}
+									items={content.find.cities}
+									placeholder={input.placeholder || ''}
+								/>
+							)}
+							{input.formName === 'phone' && (
+								<Input
+									register={register(input.title, {
+										required: true
+									})}
+									type='text'
+									placeholder={input.placeholder || ''}
+									isPhone
+								/>
+							)}
+							{(input.type === 'text' ||
+								input.type === 'email') && (
+								<Input
+									register={register(input.title, {
+										required: true
+									})}
+									type={input.type}
+									placeholder={input.placeholder || ''}
+								/>
+							)}
+						</Label>
+					)
+				})}
 				<Label title='Дата от'>
 					<Input
-						register={register('date-from', { required: true })}
-						dateValue={dateFrom}
+						register={register('date-from', {
+							required: true
+						})}
 						type='date'
-						max='9999-12-31'
 						placeholder='ДД.ММ.ГГГГ'
+						max='9999-12-31'
+						dateValue={dateFrom}
 					/>
 				</Label>
 				<Label title='Дата до'>
 					<Input
-						register={register('date-to', { required: true })}
-						dateValue={dateTo}
+						register={register('date-to', {
+							required: true
+						})}
 						type='date'
-						max='9999-12-31'
 						placeholder='ДД.ММ.ГГГГ'
+						max='9999-12-31'
+						dateValue={dateTo}
 					/>
 				</Label>
+
 				<Label title='Комментарий' className={styles.labelComment}>
-					<Textarea register={register('comment')} />
+					<Textarea
+						register={register('comment', { required: true })}
+					/>
 				</Label>
 
 				<Label title='Вам есть 18 лет?' className={styles.labelAges}>
@@ -93,10 +100,10 @@ const Form = () => {
 						<Label
 							title='Да'
 							labelValue='YES'
-							radioValue={age}
+							radioValue={adult}
 							isRadio>
 							<Input
-								register={register('age', { required: true })}
+								register={register('adult', { required: true })}
 								type='radio'
 								value='YES'
 							/>
@@ -105,17 +112,16 @@ const Form = () => {
 						<Label
 							title='Нет'
 							labelValue='NO'
-							radioValue={age}
+							radioValue={adult}
 							isRadio>
 							<Input
-								register={register('age', { required: true })}
+								register={register('adult', { required: true })}
 								type='radio'
 								value='NO'
 							/>
 						</Label>
 					</div>
 				</Label>
-
 				<Label className={styles.labelTerms}>
 					<Input
 						register={register('agree', { required: true })}
@@ -126,7 +132,7 @@ const Form = () => {
 					<Typography
 						tag='p'
 						size='small'
-						className={agree && styles.termsActive}>
+						className={agree ? styles.termsActive : ''}>
 						<span className={styles.termsText}>
 							Нажимая кнопку, я принимаю условия{' '}
 						</span>
@@ -135,7 +141,6 @@ const Form = () => {
 						</Link>
 					</Typography>
 				</Label>
-
 				<div className={styles.buttons}>
 					<Button variant='form' type='submit'>
 						Найти тур

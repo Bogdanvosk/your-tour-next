@@ -19,9 +19,7 @@
 .imageWrapper {
 	width: 370px;
 	height: 370px;
-
 	border-radius: 50px;
-
 	overflow: hidden;
 
 	@include mixins.mobile {
@@ -40,9 +38,9 @@
 
 .content {
 	display: flex;
-	max-width: 371px;
 	flex-direction: column;
 	gap: 1.25rem;
+	max-width: 371px;
 }
 
 .title {
@@ -67,10 +65,9 @@
 .mail {
 	color: variables.$color-black;
 	border-bottom: 1px solid transparent;
-
 	transition: color 0.3s ease, border-color 0.3s ease;
 
-	&:hover {
+	@include mixins.hover {
 		border-color: variables.$color-black;
 	}
 

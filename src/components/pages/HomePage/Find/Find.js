@@ -1,3 +1,5 @@
+import { content } from '@/content'
+
 import Container from '@/components/common/Container/Container'
 import Form from '@/components/common/Form/Form'
 import SectionHead from '@/components/common/SectionHead/SectionHead'
@@ -7,9 +9,8 @@ const Find = () => {
 		<section>
 			<Container>
 				<SectionHead
-					title='Собери свой тур'
-					subtitle='Идейные соображения высшего порядка, а также рамки и место
-					обучения кадров'
+					title={content.find.title}
+					subtitle={content.find.subtitle}
 				/>
 				<Form />
 			</Container>

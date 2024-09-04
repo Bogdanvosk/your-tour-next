@@ -2,11 +2,11 @@
 @use '@/styles/mixins';
 
 .item {
-	max-width: 570px;
-	padding: 2.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	max-width: 570px;
+	padding: 2.5rem;
 	background-color: variables.$color-beige-200;
 	border-radius: 50px;
 
@@ -27,10 +27,10 @@
 }
 
 .author {
-	margin-top: 4.38rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: 4.38rem;
 
 	@include mixins.mobile {
 		margin-top: 2.5rem;

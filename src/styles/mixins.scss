@@ -1,5 +1,19 @@
 @use 'variables';
 
+@mixin hover {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			@content;
+		}
+	}
+}
+
 @mixin p-mobile {
 	@media (max-width: variables.$sm) {
 		font-size: 1rem;
@@ -26,9 +40,11 @@
 		transition: width 0.3s ease, opacity 0.3s ease;
 	}
 
-	&:hover::before {
-		width: 100%;
-		opacity: 1;
+	@include hover {
+		&::before {
+			width: 100%;
+			opacity: 1;
+		}
 	}
 }
 
@@ -69,11 +85,10 @@
 
 	@include mobile {
 		padding: 0.63rem;
-
 		font-size: 1rem;
 	}
 
-	&:hover {
+	@include hover {
 		background-color: variables.$color-beige-200;
 	}
 

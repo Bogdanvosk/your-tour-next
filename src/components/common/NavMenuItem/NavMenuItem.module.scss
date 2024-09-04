@@ -4,6 +4,7 @@
 .nav {
 	&MenuItem {
 		position: relative;
+		
 		@include mixins.underlined(variables.$color-white);
 
 		&Fixed::before {

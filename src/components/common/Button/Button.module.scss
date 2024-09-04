@@ -2,9 +2,9 @@
 @use '@/styles/mixins';
 
 .button {
-	cursor: pointer;
 	border: none;
 	transition: color 0.3s ease, background-color 0.3s ease;
+	cursor: pointer;
 }
 
 .infoButton {
@@ -18,7 +18,7 @@
 	background-color: variables.$color-white;
 	border-radius: 10px;
 
-	&:hover {
+	@include mixins.hover {
 		color: variables.$color-white;
 		background-color: variables.$color-orange-200;
 	}
@@ -29,8 +29,8 @@
 	}
 
 	@include mixins.mobile {
-		font-size: 1rem;
 		margin-top: 2.5rem;
+		font-size: 1rem;
 	}
 }
 
@@ -61,7 +61,6 @@
 }
 
 .formButton {
-	cursor: pointer;
 	padding: 0.94rem 4.44rem;
 	font-size: 1.25rem;
 	line-height: 1.42;
@@ -70,6 +69,15 @@
 	border: none;
 	border-radius: 10px;
 	transition: background-color 0.3s ease;
+	cursor: pointer;
+
+	@include mixins.hover {
+		background-color: variables.$color-green-300;
+	}
+
+	&:active {
+		background-color: variables.$color-green-200;
+	}
 
 	@include mixins.mobile {
 		padding: 12px 30px;
@@ -81,19 +89,11 @@
 		font-size: 0.9rem;
 	}
 
-	&:hover {
-		background-color: variables.$color-green-300;
-	}
-
-	&:active {
-		background-color: variables.$color-green-200;
-	}
-
 	&.reset {
 		color: variables.$color-green-400;
 		background-color: variables.$color-green-100;
 
-		&:hover {
+		@include mixins.hover {
 			background-color: variables.$color-gray-100;
 		}
 
