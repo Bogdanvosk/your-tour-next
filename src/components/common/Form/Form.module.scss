@@ -12,9 +12,9 @@
 	}
 
 	@include mixins.mobile {
+		margin-top: 2.5rem;
 		padding: 1.25rem 1.25rem 2.5rem 1.25rem;
 		border-radius: 30px;
-		margin-top: 2.5rem;
 	}
 }
 
@@ -45,7 +45,6 @@
 	}
 
 	&::before {
-		content: '';
 		position: absolute;
 		top: -1px;
 		left: 0;
@@ -54,6 +53,7 @@
 		background: transparent;
 		border: 2px solid variables.$color-black;
 		border-radius: 5px;
+		content: '';
 
 		@include mixins.mobile {
 			width: 18px;
@@ -67,7 +67,6 @@
 }
 
 .checkInput + p::before {
-	content: '';
 	position: absolute;
 	top: 11px;
 	left: 3px;
@@ -78,6 +77,7 @@
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	transform: rotate(45deg);
+	content: '';
 
 	@include mixins.mobile {
 		left: 3px;
@@ -87,7 +87,6 @@
 }
 
 .checkInput + p::after {
-	content: '';
 	position: absolute;
 	top: 10px;
 	left: 8px;
@@ -98,6 +97,7 @@
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	transform: rotate(-45deg);
+	content: '';
 
 	@include mixins.mobile {
 		width: 9px;

@@ -6,12 +6,13 @@
 }
 
 .select {
-	@include mixins.input;
 	width: 100%;
 	color: variables.$color-black;
 	border: none;
 	appearance: none;
 	cursor: pointer;
+	
+	@include mixins.input;
 
 	&:focus {
 		background-color: variables.$color-beige-100;

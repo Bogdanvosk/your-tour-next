@@ -2,11 +2,11 @@
 @use '@/styles/mixins';
 
 .items {
-	margin-top: 6.25rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: 3.13rem;
+	margin-top: 6.25rem;
 
 	@include mixins.mobile {
 		margin-top: 3.13rem;

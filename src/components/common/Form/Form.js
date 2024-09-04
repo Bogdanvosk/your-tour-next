@@ -132,7 +132,7 @@ const Form = () => {
 					<Typography
 						tag='p'
 						size='small'
-						className={agree && styles.termsActive}>
+						className={agree ? styles.termsActive : ''}>
 						<span className={styles.termsText}>
 							Нажимая кнопку, я принимаю условия{' '}
 						</span>

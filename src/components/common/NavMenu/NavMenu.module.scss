@@ -4,6 +4,7 @@
 .nav {
 	&MenuList {
 		@include mixins.centered;
+
 		gap: 3.13rem;
 
 		@include mixins.tablet {
@@ -17,6 +18,7 @@
 
 	&MenuPhone {
 		position: relative;
+		
 		@include mixins.underlined(variables.$color-white);
 
 		&Fixed::before {

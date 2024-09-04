@@ -3,10 +3,10 @@
 
 .cards {
 	display: grid;
-	margin-top: 6.25rem;
 	grid-template-columns: repeat(3, 370px);
 	grid-template-rows: repeat(2, 533px);
 	gap: 1.88rem;
+	margin-top: 6.25rem;
 
 	@include mixins.tablet-l {
 		grid-template-columns: repeat(2, minmax(450px, 1fr));

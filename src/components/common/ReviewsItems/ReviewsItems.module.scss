@@ -3,9 +3,9 @@
 
 .items {
 	display: flex;
-	margin-top: 6.25rem;
 	justify-content: center;
 	gap: 1.88rem;
+	margin-top: 6.25rem;
 
 	@include mixins.tablet {
 		gap: 1.13rem;

@@ -33,7 +33,6 @@
 		transition: color 0.3s ease;
 
 		&::after {
-			content: '';
 			position: absolute;
 			bottom: -2px;
 			left: 0;
@@ -42,6 +41,7 @@
 			background-color: variables.$color-black;
 			opacity: 0;
 			transition: width 0.3s ease, opacity 0.3s ease;
+			content: '';
 		}
 	}
 

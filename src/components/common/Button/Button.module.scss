@@ -2,9 +2,9 @@
 @use '@/styles/mixins';
 
 .button {
-	cursor: pointer;
 	border: none;
 	transition: color 0.3s ease, background-color 0.3s ease;
+	cursor: pointer;
 }
 
 .infoButton {
@@ -29,8 +29,8 @@
 	}
 
 	@include mixins.mobile {
-		font-size: 1rem;
 		margin-top: 2.5rem;
+		font-size: 1rem;
 	}
 }
 
@@ -61,7 +61,6 @@
 }
 
 .formButton {
-	cursor: pointer;
 	padding: 0.94rem 4.44rem;
 	font-size: 1.25rem;
 	line-height: 1.42;
@@ -70,6 +69,7 @@
 	border: none;
 	border-radius: 10px;
 	transition: background-color 0.3s ease;
+	cursor: pointer;
 
 	@include mixins.hover {
 		background-color: variables.$color-green-300;

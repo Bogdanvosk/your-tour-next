@@ -1,10 +1,11 @@
 @use '@/styles/mixins';
 
 .tabs {
-	margin-top: 2.19rem;
-	@include mixins.centered;
 	flex-wrap: wrap;
 	gap: 1.88rem;
+	margin-top: 2.19rem;
+	
+	@include mixins.centered;
 
 	@include mixins.mobile {
 		margin-top: 1.88rem;

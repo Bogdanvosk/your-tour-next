@@ -30,7 +30,6 @@
 	}
 
 	&::before {
-		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -38,6 +37,7 @@
 		height: 26px;
 		border: 2px solid variables.$color-black;
 		border-radius: 100%;
+		content: '';
 
 		@include mixins.mobile {
 			width: 16px;
@@ -46,7 +46,6 @@
 	}
 
 	& span::after {
-		content: '';
 		position: absolute;
 		top: 7px;
 		left: 7px;
@@ -56,6 +55,7 @@
 		border-radius: 100%;
 		opacity: 0;
 		transition: opacity 0.3s ease;
+		content: '';
 
 		@include mixins.mobile {
 			width: 6px;

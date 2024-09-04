@@ -2,13 +2,13 @@
 @use '@/styles/mixins';
 
 .card {
-	cursor: pointer;
 	position: relative;
 	z-index: 5;
 	padding: 3.56rem 3.13rem;
 	color: variables.$color-white;
 	transition: background-color 0.3s ease;
-
+	cursor: pointer;
+	
 	@include mixins.hover {
 		.button {
 			background-color: variables.$color-green-400;
@@ -42,8 +42,8 @@
 
 .imageWrapper {
 	position: absolute;
-	left: 0;
 	top: 0;
+	left: 0;
 	display: inline-block;
 	width: 100%;
 	height: 100%;
@@ -94,17 +94,14 @@
 
 .button {
 	position: absolute;
-	left: 30px;
 	bottom: 40px;
-
+	left: 30px;
 	padding: 7px 62px 6px 19px;
-
 	font-size: 1.38rem;
 
 	@include mixins.mobile {
 		left: 6px;
 		bottom: 18px;
-
 		font-size: 0.9rem;
 		line-height: 1.56rem;
 	}

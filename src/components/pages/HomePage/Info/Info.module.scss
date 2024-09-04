@@ -3,7 +3,6 @@
 
 .info {
 	position: relative;
-	@include mixins.centered;
 	height: 100vh;
 	margin-top: 0;
 	color: variables.$color-white;
@@ -11,6 +10,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	
+	@include mixins.centered;
 
 	&Wrapper {
 		display: flex;
