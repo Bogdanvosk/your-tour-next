@@ -1,66 +1,63 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .socials {
-	display: flex;
-	align-items: center;
-	gap: 1.86rem;
+  display: flex;
+  align-items: center;
+  gap: 1.86rem;
 
-	&-item:nth-child(1) {
-		margin-right: 0.4rem;
-	}
+  &-item:nth-child(1) {
+    margin-right: 0.4rem;
+  }
 
-	@include mixins.mobile {
-		gap: 0.94rem;
-	}
+  @include mobile {
+    gap: 0.94rem;
+  }
 
-	@media (max-width: 359px) {
-		flex-direction: column;
-	}
+  @media (max-width: 359px) {
+    flex-direction: column;
+  }
 }
 
 .link {
-	display: flex;
-	align-items: center;
-	gap: 0.93rem;
+  display: flex;
+  align-items: center;
+  gap: 0.93rem;
 
-	@include mixins.mobile {
-		gap: 0.53rem;
-	}
+  @include mobile {
+    gap: 0.53rem;
+  }
 
-	span {
-		position: relative;
-		transition: color 0.3s ease;
+  span {
+    position: relative;
+    transition: color 0.3s ease;
 
-		&::after {
-			position: absolute;
-			bottom: -2px;
-			left: 0;
-			width: 0;
-			height: 1px;
-			background-color: variables.$color-black;
-			opacity: 0;
-			transition: width 0.3s ease, opacity 0.3s ease;
-			content: '';
-		}
-	}
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-black;
+      opacity: 0;
+      transition: width 0.3s ease, opacity 0.3s ease;
+      content: '';
+    }
+  }
 
-	@include mixins.hover {
-		span::after {
-			width: 100%;
-			opacity: 1;
-		}
-	}
+  @include hover {
+    span::after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
 
-	&:active span {
-		color: variables.$color-orange-200;
+  &:active span {
+    color: $color-orange-200;
 
-		&::after {
-			background-color: variables.$color-orange-200;
-		}
-	}
+    &::after {
+      background-color: $color-orange-200;
+    }
+  }
 }
 
 .icon {
-	color: #a6a6a6;
+  color: #a6a6a6;
 }

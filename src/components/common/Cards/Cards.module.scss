@@ -1,26 +1,23 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .cards {
-	display: grid;
-	grid-template-columns: repeat(3, 370px);
-	grid-template-rows: repeat(2, 533px);
-	gap: 1.88rem;
-	margin-top: 6.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  grid-template-rows: repeat(2, 533px);
+  gap: 1.88rem;
+  margin-top: 6.25rem;
 
-	@include mixins.tablet-l {
-		grid-template-columns: repeat(2, minmax(450px, 1fr));
-		grid-template-rows: repeat(3, 533px);
-		place-content: center;
-		gap: 1.13rem;
-	}
+  @include tablet-l {
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    grid-template-rows: repeat(3, 533px);
+    place-content: center;
+    gap: 1.13rem;
+  }
 
-	@media (max-width: variables.$md) {
-		display: flex;
-		flex-direction: column;
-	}
+  @media (max-width: $md) {
+    display: flex;
+    flex-direction: column;
+  }
 
-	@include mixins.mobile {
-		margin-top: 3.13rem;
-	}
+  @include mobile {
+    margin-top: 3.13rem;
+  }
 }

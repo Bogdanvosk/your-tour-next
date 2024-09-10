@@ -1,14 +1,11 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .container {
-	@include mixins.container(1170px, 55px);
+  @include container(1170px, 55px);
 
-	@include mixins.tablet {
-		@include mixins.container(1170px, 53px);
-	}
+  @include tablet {
+    @include container(1170px, 53px);
+  }
 
-	@include mixins.mobile {
-		@include mixins.container(1170px, 21px);
-	}
+  @include mobile {
+    @include container(1170px, 21px);
+  }
 }

@@ -1,24 +1,21 @@
-@use '@/styles/mixins';
-@import '@/styles/variables';
-
 .items {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	gap: 1.4625vw 0.8425vw;
-	margin: 6.25rem auto 0;
-	padding: 0 1.58rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.4625vw 0.8425vw;
+  margin: 6.25rem auto 0;
+  padding: 0 1.58rem;
 
-	@include mixins.tablet {
-		justify-content: center;
-		column-gap: 1.95vw;
-		row-gap: 3.13vw;
-		padding: 0;
-	}
+  @include tablet {
+    justify-content: center;
+    column-gap: 1.95vw;
+    row-gap: 3.13vw;
+    padding: 0;
+  }
 
-	@include mixins.mobile {
-		column-gap: 2.77vw;
-		row-gap: 5vw;
-		margin-top: 3.13rem;
-	}
+  @include mobile {
+    column-gap: 2.77vw;
+    row-gap: 5vw;
+    margin-top: 3.13rem;
+  }
 }

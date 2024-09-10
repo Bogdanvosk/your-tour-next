@@ -1,21 +1,18 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .wrapper {
 	position: relative;
 }
 
 .select {
 	width: 100%;
-	color: variables.$color-black;
+	color: $color-black;
 	border: none;
 	appearance: none;
 	cursor: pointer;
 	
-	@include mixins.input;
+	@include input;
 
 	&:focus {
-		background-color: variables.$color-beige-100;
+		background-color: $color-beige-100;
 		border: none;
 	}
 
@@ -34,7 +31,7 @@
 	right: 20px;
 	z-index: 5;
 
-	@include mixins.mobile {
+	@include mobile {
 		top: 15px;
 		right: 14px;
 	}

@@ -1,24 +1,21 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .input {
-	@include mixins.input;
+  @include input;
 
-	&[type='date'] {
-		text-transform: uppercase;
-	}
+  &[type='date'] {
+    text-transform: uppercase;
+  }
 
-	&[type='number']::-webkit-outer-spin-button,
-	&[type='number']::-webkit-inner-spin-button {
-		margin: 0;
-		-webkit-appearance: none;
-	}
+  &[type='number']::-webkit-outer-spin-button,
+  &[type='number']::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
 }
 
 .incorrect {
-	color: variables.$color-gray-300;
+  color: $color-gray-300;
 }
 
 .hiddenInput {
-	display: none;
+  display: none;
 }

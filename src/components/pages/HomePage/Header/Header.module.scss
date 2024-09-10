@@ -1,43 +1,40 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .header {
-	position: absolute;
-	z-index: 10;
-	width: 100%;
-	color: variables.$color-white;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  color: $color-white;
 
-	&Fixed {
-		position: fixed;
-		padding-bottom: 1.75rem;
-		color: variables.$color-black;
-		background-color: rgba(243, 239, 232, 0.6);
-		transition: background-color 0.3s ease, color 0.3s ease;
-		backdrop-filter: blur(54px);
-	}
+  &Fixed {
+    position: fixed;
+    padding-bottom: 1.75rem;
+    color: $color-black;
+    background-color: rgba(243, 239, 232, 0.6);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    backdrop-filter: blur(54px);
+  }
 }
 
 .nav {
-	padding-top: 1.75rem;
-	font-size: 1.25rem;
-	line-height: 1.42;
+  padding-top: 1.75rem;
+  font-size: 1.25rem;
+  line-height: 1.42;
 
-	@include mixins.mobile {
-		padding-top: 2.03rem;
-	}
+  @include mobile {
+    padding-top: 2.03rem;
+  }
 
-	&Wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-		&Fixed {
-			color: variables.$color-black;
-			@include mixins.container(1170px, 55px);
+    &Fixed {
+      color: $color-black;
+      @include container(1170px, 55px);
 
-			@include mixins.mobile {
-				@include mixins.container(1170px, 20px);
-			}
-		}
-	}
+      @include mobile {
+        @include container(1170px, 20px);
+      }
+    }
+  }
 }

@@ -1,21 +1,17 @@
-import cn from 'classnames'
-import PropTypes from 'prop-types'
+import cn from 'classnames';
+import PropTypes from 'prop-types';
 
-import styles from './Textarea.module.scss'
+import s from './Textarea.module.scss';
 
 const Textarea = ({ register, className = '', ...props }) => {
-	return (
-		<textarea
-			{...register}
-			className={cn(styles.textarea, className)}
-			{...props}
-		/>
-	)
-}
+  return (
+    <textarea {...register} className={cn(s.textarea, className)} {...props} />
+  );
+};
 
-export default Textarea
+export default Textarea;
 
 Textarea.propTypes = {
-	register: PropTypes.object,
-	className: PropTypes.string
-}
+  register: PropTypes.object,
+  className: PropTypes.string,
+};

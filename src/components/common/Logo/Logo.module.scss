@@ -1,7 +1,5 @@
-@use '@/styles/variables';
-
 .fixedLogo {
-	color: variables.$color-black;
+	color: $color-black;
 }
 
 .smallLogo {

@@ -1,82 +1,79 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .h1,
 .h2 {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .h1 {
-	font-size: 6rem;
-	line-height: 1.09;
-	letter-spacing: 0.02em;
+  font-size: 6rem;
+  line-height: 1.09;
+  letter-spacing: 0.02em;
 
-	@include mixins.mobile {
-		font-size: 2.13rem;
-		line-height: 1.12;
-	}
+  @include mobile {
+    font-size: 2.13rem;
+    line-height: 1.12;
+  }
 }
 
 .h2 {
-	font-size: 3.69rem;
-	line-height: 1.24;
+  font-size: 3.69rem;
+  line-height: 1.24;
 
-	@include mixins.mobile {
-		font-size: 2.13rem;
-		line-height: 1.12;
-	}
+  @include mobile {
+    font-size: 2.13rem;
+    line-height: 1.12;
+  }
 }
 
 .h3 {
-	font-weight: 500;
-	font-size: 2.19rem;
-	line-height: 1.22;
+  font-weight: 500;
+  font-size: 2.19rem;
+  line-height: 1.22;
 
-	@include mixins.mobile {
-		font-size: 1.44rem;
-		line-height: 1.2;
-		letter-spacing: 0.04em;
-	}
+  @include mobile {
+    font-size: 1.44rem;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+  }
 }
 
 .title {
-	text-align: center;
+  text-align: center;
 }
 
 .subtitle {
-	max-width: 450px;
-	margin: 1.88rem auto 0;
-	text-align: center;
-	color: variables.$color-gray-300;
+  max-width: 450px;
+  margin: 1.88rem auto 0;
+  text-align: center;
+  color: $color-gray-300;
 
-	@include mixins.mobile {
-		margin-top: 1.25rem;
-	}
+  @include mobile {
+    margin-top: 1.25rem;
+  }
 }
 
 .big {
-	font-weight: 700;
-	font-size: 1.44rem;
-	line-height: 1.22;
+  font-weight: 700;
+  font-size: 1.44rem;
+  line-height: 1.22;
 
-	@include mixins.p-mobile;
+  @include p-mobile;
 }
 
 .normal {
-	font-size: 20px;
+  font-size: 20px;
 
-	@include mixins.p-mobile;
+  @include p-mobile;
 }
 
 .normal,
 .small {
-	font-weight: 400;
-	line-height: 1.42;
+  font-weight: 400;
+  line-height: 1.42;
 }
 
 .small {
-	font-size: 1.06rem;
-	letter-spacing: -0.01em;
+  font-size: 1.06rem;
+  letter-spacing: -0.01em;
 
-	@include mixins.p-mobile;
+  @include p-mobile;
 }

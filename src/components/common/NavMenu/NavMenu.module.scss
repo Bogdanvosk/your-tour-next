@@ -1,32 +1,29 @@
-@use '@/styles/mixins';
-@use '@/styles/variables';
-
 .nav {
-	&MenuList {
-		@include mixins.centered;
+  &MenuList {
+    @include centered;
 
-		gap: 3.13rem;
+    gap: 3.13rem;
 
-		@include mixins.tablet {
-			gap: 1.88rem;
-		}
+    @include tablet {
+      gap: 1.88rem;
+    }
 
-		@media (max-width: variables.$md) {
-			display: none;
-		}
-	}
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
 
-	&MenuPhone {
-		position: relative;
-		
-		@include mixins.underlined(variables.$color-white);
+  &MenuPhone {
+    position: relative;
 
-		&Fixed::before {
-			background-color: variables.$color-black;
-		}
+    @include underlined($color-white);
 
-		@include mixins.mobile {
-			font-size: 1rem;
-		}
-	}
+    &Fixed::before {
+      background-color: $color-black;
+    }
+
+    @include mobile {
+      font-size: 1rem;
+    }
+  }
 }

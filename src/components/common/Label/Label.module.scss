@@ -1,71 +1,68 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .label {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
 
-	@include mixins.mobile {
-		gap: 0.44rem;
-	}
+  @include mobile {
+    gap: 0.44rem;
+  }
 }
 
 .span {
-	font-size: 1.25rem;
-	line-height: 1.42;
+  font-size: 1.25rem;
+  line-height: 1.42;
 
-	@include mixins.mobile {
-		font-size: 1rem;
-	}
+  @include mobile {
+    font-size: 1rem;
+  }
 }
 
 .radioLabel {
-	position: relative;
-	padding-left: 37px;
+  position: relative;
+  padding-left: 37px;
 
-	@include mixins.mobile {
-		padding-left: 31px;
-	}
+  @include mobile {
+    padding-left: 31px;
+  }
 
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 26px;
-		height: 26px;
-		border: 2px solid variables.$color-black;
-		border-radius: 100%;
-		content: '';
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border: 2px solid $color-black;
+    border-radius: 100%;
+    content: '';
 
-		@include mixins.mobile {
-			width: 16px;
-			height: 16px;
-		}
-	}
+    @include mobile {
+      width: 16px;
+      height: 16px;
+    }
+  }
 
-	& span::after {
-		position: absolute;
-		top: 7px;
-		left: 7px;
-		width: 12px;
-		height: 12px;
-		background-color: variables.$color-black;
-		border-radius: 100%;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-		content: '';
+  & span::after {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 12px;
+    height: 12px;
+    background-color: $color-black;
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    content: '';
 
-		@include mixins.mobile {
-			width: 6px;
-			height: 6px;
-			top: 5px;
-			left: 5px;
-		}
-	}
+    @include mobile {
+      width: 6px;
+      height: 6px;
+      top: 5px;
+      left: 5px;
+    }
+  }
 
-	& span.checked::after {
-		opacity: 1;
-	}
+  & span.checked::after {
+    opacity: 1;
+  }
 }

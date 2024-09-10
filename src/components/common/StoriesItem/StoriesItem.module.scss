@@ -1,13 +1,10 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .item {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 3.75rem;
-	color: variables.$color-white;
+	color: $color-white;
 	background: linear-gradient(
 		270deg,
 		rgba(0, 0, 0, 0) 0.01%,
@@ -17,31 +14,31 @@
 	overflow: hidden;
 	cursor: pointer;
 
-	@media (max-width: variables.$md) {
+	@media (max-width: $md) {
 		padding: 1.88rem;
 	}
 
-	@include mixins.mobile {
+	@include mobile {
 		border-radius: 20px;
 	}
 
-	@include mixins.hover {
+	@include hover {
 		.image {
 			transform: scale(1.2);
 		}
 
 		.button {
-			background-color: variables.$color-green-400;
+			background-color: $color-green-400;
 		}
 	}
 
 	&:active .button {
-		background-color: variables.$color-orange-200;
+		background-color: $color-orange-200;
 	}
 }
 
 .title {
-	@include mixins.mobile {
+	@include mobile {
 		max-width: 62%;
 	}
 }
@@ -58,7 +55,7 @@
 	object-position: 50% 50%;
 	transition: transform 0.3s ease;
 
-	@include mixins.mobile {
+	@include mobile {
 		border-radius: 20px;
 	}
 }
@@ -67,7 +64,7 @@
 	max-width: 554px;
 	margin-top: 2.31rem;
 
-	@include mixins.mobile {
+	@include mobile {
 		margin-top: 1.25rem;
 	}
 }
@@ -78,7 +75,7 @@
 	font-size: 1.25rem;
 	line-height: 1.42;
 
-	@include mixins.mobile {
+	@include mobile {
 		margin-left: 1.5rem;
 		font-size: 1rem;
 		line-height: 1.42;
@@ -94,14 +91,14 @@
 	margin-top: 14.09rem;
 	align-items: center;
 
-	@include mixins.mobile {
+	@include mobile {
 		margin-top: 11.44rem;
 	}
 
 	&Big {
 		margin-top: 7.19rem;
 
-		@include mixins.mobile {
+		@include mobile {
 			margin-top: 5.63rem;
 		}
 	}
@@ -124,7 +121,7 @@
 	left: 38px;
 	font-size: 1.38rem;
 
-	@include mixins.mobile {
+	@include mobile {
 		bottom: 24px;
 		left: 10px;
 		font-size: 0.94rem;
@@ -141,14 +138,14 @@
 		left: 0;
 		width: 0;
 		height: 2px;
-		background-color: variables.$color-white;
+		background-color: $color-white;
 		opacity: 0;
 		transition: width 0.3s ease, opacity 0.3s ease,
 			background-color 0.3s ease;
 		content: '';
 	}
 
-	@include mixins.hover {
+	@include hover {
 		&::after {
 			width: 100%;
 			opacity: 1;
@@ -156,10 +153,10 @@
 	}
 
 	&:active {
-		color: variables.$color-orange-200;
+		color: $color-orange-200;
 
 		&::after {
-			background-color: variables.$color-orange-200;
+			background-color: $color-orange-200;
 		}
 	}
 }

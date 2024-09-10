@@ -1,49 +1,50 @@
-import cn from 'classnames'
-import PropTypes from 'prop-types'
+import cn from 'classnames';
+import PropTypes from 'prop-types';
 
-import styles from './Typography.module.scss'
+import s from './Typography.module.scss';
 
 const typographyVariants = {
-	title: styles.title,
-	subtitle: styles.subtitle
-}
+  title: s.title,
+  subtitle: s.subtitle,
+};
 
 const typographySizes = {
-	small: styles.small,
-	normal: styles.normal,
-	big: styles.big
-}
+  small: s.small,
+  normal: s.normal,
+  big: s.big,
+};
 
 const Typography = ({
-	tag = 'h1',
-	variant = '',
-	size = '',
-	className = '',
-	children,
-	...props
+  tag = 'h1',
+  variant = '',
+  size = '',
+  className = '',
+  children,
+  ...props
 }) => {
-	const Component = tag
+  const Component = tag;
 
-	return (
-		<Component
-			{...props}
-			className={cn(
-				styles[tag],
-				typographyVariants[variant],
-				typographySizes[size],
-				className
-			)}>
-			{children}
-		</Component>
-	)
-}
+  return (
+    <Component
+      {...props}
+      className={cn(
+        s[tag],
+        typographyVariants[variant],
+        typographySizes[size],
+        className
+      )}
+    >
+      {children}
+    </Component>
+  );
+};
 
-export default Typography
+export default Typography;
 
 Typography.propTypes = {
-	tag: PropTypes.string,
-	variant: PropTypes.string,
-	size: PropTypes.string,
-	className: PropTypes.string,
-	children: PropTypes.node
-}
+  tag: PropTypes.string,
+  variant: PropTypes.string,
+  size: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node,
+};

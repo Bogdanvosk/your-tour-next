@@ -1,43 +1,39 @@
-import cn from 'classnames'
-import PropTypes from 'prop-types'
+import cn from 'classnames';
+import PropTypes from 'prop-types';
 
-import styles from './Label.module.scss'
+import s from './Label.module.scss';
 
 const Label = ({
-	labelValue,
-	children,
-	isRadio = false,
-	title = '',
-	radioValue = '',
-	className = ''
+  labelValue,
+  children,
+  isRadio = false,
+  title = '',
+  radioValue = '',
+  className = '',
 }) => {
-	return (
-		<label
-			className={cn(
-				styles.label,
-				{ [styles.radioLabel]: isRadio },
-				className
-			)}>
-			{title !== '' && (
-				<span
-					className={cn(styles.span, {
-						[styles.checked]: radioValue === labelValue
-					})}>
-					{title}
-				</span>
-			)}
-			{children}
-		</label>
-	)
-}
+  return (
+    <label className={cn(s.label, { [s.radioLabel]: isRadio }, className)}>
+      {title !== '' && (
+        <span
+          className={cn(s.span, {
+            [s.checked]: radioValue === labelValue,
+          })}
+        >
+          {title}
+        </span>
+      )}
+      {children}
+    </label>
+  );
+};
 
-export default Label
+export default Label;
 
 Label.propTypes = {
-	labelValue: PropTypes.string,
-	children: PropTypes.node,
-	isRadio: PropTypes.bool,
-	title: PropTypes.string,
-	radioValue: PropTypes.string,
-	className: PropTypes.string
-}
+  labelValue: PropTypes.string,
+  children: PropTypes.node,
+  isRadio: PropTypes.bool,
+  title: PropTypes.string,
+  radioValue: PropTypes.string,
+  className: PropTypes.string,
+};

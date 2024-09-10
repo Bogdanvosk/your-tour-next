@@ -1,56 +1,53 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .item {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	max-width: 570px;
-	padding: 2.5rem;
-	background-color: variables.$color-beige-200;
-	border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 570px;
+  padding: 2.5rem;
+  background-color: $color-beige-200;
+  border-radius: 50px;
 
-	@include mixins.tablet {
-		width: 100%;
-	}
+  @include tablet {
+    width: 100%;
+  }
 
-	@include mixins.mobile {
-		padding: 21px;
-		border-radius: 20px;
-	}
+  @include mobile {
+    padding: 21px;
+    border-radius: 20px;
+  }
 }
 
 .text {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .author {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 4.38rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.38rem;
 
-	@include mixins.mobile {
-		margin-top: 2.5rem;
-		align-items: end;
-	}
+  @include mobile {
+    margin-top: 2.5rem;
+    align-items: end;
+  }
 
-	& .tour {
-		margin-top: 0.5rem;
-		color: variables.$color-gray-300;
-	}
+  & .tour {
+    margin-top: 0.5rem;
+    color: $color-gray-300;
+  }
 
-	& .avatar {
-		width: 75px;
-		height: 75px;
-		border-radius: 100%;
-		overflow: hidden;
+  & .avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    overflow: hidden;
 
-		& .image {
-			display: block;
-			max-width: 100%;
-		}
-	}
+    & .image {
+      display: block;
+      max-width: 100%;
+    }
+  }
 }

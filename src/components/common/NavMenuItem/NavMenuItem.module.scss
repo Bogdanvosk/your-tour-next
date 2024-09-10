@@ -1,14 +1,11 @@
-@use '@/styles/variables';
-@use '@/styles/mixins';
-
 .nav {
 	&MenuItem {
 		position: relative;
 		
-		@include mixins.underlined(variables.$color-white);
+		@include underlined($color-white);
 
 		&Fixed::before {
-			background-color: variables.$color-black;
+			background-color: $color-black;
 		}
 	}
 }

@@ -1,16 +1,16 @@
-import { Roboto } from 'next/font/google'
+import { Roboto } from 'next/font/google';
 
-import '@/styles/globals.scss'
+import '@/styles/globals.scss';
 
 const roboto = Roboto({
-	weight: ['400', '500', '700'],
-	subsets: ['latin']
-})
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+});
 
 export default function App({ Component, pageProps }) {
-	return (
-		<main className={roboto.className}>
-			<Component {...pageProps} />
-		</main>
-	)
+  return (
+    <main className={roboto.className}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
